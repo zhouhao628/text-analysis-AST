@@ -15,4 +15,13 @@ To install EAST, run:
 
 This may require admin permissions on your machine (and should then be run with *sudo*).
 
-EAST comes both as a *CLI application* and as a *python library* (which can be i
+EAST comes both as a *CLI application* and as a *python library* (which can be imported and used in python code).
+
+
+CLI application
+------------------------
+
+Keyphrases table
+~~~~~~~~~~~~~~~~
+
+The basic use case for the AST metho
