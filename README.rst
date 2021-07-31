@@ -13,4 +13,6 @@ To install EAST, run:
 
     $ pip install EAST
 
-This may re
+This may require admin permissions on your machine (and should then be run with *sudo*).
+
+EAST comes both as a *CLI application* and as a *python library* (which can be i
