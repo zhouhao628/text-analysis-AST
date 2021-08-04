@@ -29,4 +29,5 @@ The basic use case for the AST method is to calculate matching scores for a set 
 *$ east [-f <table_format>] [-l <language>] [-s] [-d] [-a <ast_algorithm>] [-w <term_weighting>] [-v <vector_space>] [-y] keyphrases table <keyphrases_file> <directory_with_txt_files>*
 
 - The *-s* option determines the similarity measure to be used while computing the matching score. Its value is *"ast"* by default (as this package has been developed primarily as an implementation of the Annotated Suffix Tree method), but it can be also set to *"cosine"*: the cosine similary will be used then to compute the relevance of keyphrases to documents (the text in the collection will be represented as vectors then). 
-- Dep
+- Depending on which relevance measure is used while computing the table, there are some auxiliary options to further specify the computation:
+    - For the *AST*
