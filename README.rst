@@ -32,4 +32,6 @@ The basic use case for the AST method is to calculate matching scores for a set 
 - Depending on which relevance measure is used while computing the table, there are some auxiliary options to further specify the computation:
     - For the *AST* relevance measure:
         - The *-a* option defines the actual AST method implementation to be used. Possible arguments are *"easa"* (Enhanced Annotated Suffix Arrays), *"ast_linear"* (Linear-time and -memory implementation of Annotated Suffix Trees) and *"ast_naive"* (a slow and memory-consumptive implementation, present just for comparison).
-        - The *-d* option and specifies whether the the matching score should be computed in the denor
+        - The *-d* option and specifies whether the the matching score should be computed in the denormalized form (normalized by default, see *[Mirkin, Chernyak & Chugunova, 2012]*.
+    - For the *Cosine* relevance measure:
+        - The *-v
