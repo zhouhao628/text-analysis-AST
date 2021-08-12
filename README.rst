@@ -34,4 +34,5 @@ The basic use case for the AST method is to calculate matching scores for a set 
         - The *-a* option defines the actual AST method implementation to be used. Possible arguments are *"easa"* (Enhanced Annotated Suffix Arrays), *"ast_linear"* (Linear-time and -memory implementation of Annotated Suffix Trees) and *"ast_naive"* (a slow and memory-consumptive implementation, present just for comparison).
         - The *-d* option and specifies whether the the matching score should be computed in the denormalized form (normalized by default, see *[Mirkin, Chernyak & Chugunova, 2012]*.
     - For the *Cosine* relevance measure:
-        - The *-v* option specifies what elements should form the vector space, i.e. be the actual terms (these can be *"stems"*, *"lemmata"* or just *"words"*. In 
+        - The *-v* option specifies what elements should form the vector space, i.e. be the actual terms (these can be *"stems"*, *"lemmata"* or just *"words"*. In the first two cases, the words in the text collection get transformed into stems/lemmata automatically).
+        - The *-w* option deter
