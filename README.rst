@@ -35,4 +35,5 @@ The basic use case for the AST method is to calculate matching scores for a set 
         - The *-d* option and specifies whether the the matching score should be computed in the denormalized form (normalized by default, see *[Mirkin, Chernyak & Chugunova, 2012]*.
     - For the *Cosine* relevance measure:
         - The *-v* option specifies what elements should form the vector space, i.e. be the actual terms (these can be *"stems"*, *"lemmata"* or just *"words"*. In the first two cases, the words in the text collection get transformed into stems/lemmata automatically).
-        - The *-w* option deter
+        - The *-w* option determines which term weighting scheme should be used (*"tf-idf"* or just *"tf"*).
+- The *-y* option and determines whether the matching score should be compu
