@@ -36,4 +36,5 @@ The basic use case for the AST method is to calculate matching scores for a set 
     - For the *Cosine* relevance measure:
         - The *-v* option specifies what elements should form the vector space, i.e. be the actual terms (these can be *"stems"*, *"lemmata"* or just *"words"*. In the first two cases, the words in the text collection get transformed into stems/lemmata automatically).
         - The *-w* option determines which term weighting scheme should be used (*"tf-idf"* or just *"tf"*).
-- The *-y* option and determines whether the matching score should be compu
+- The *-y* option and determines whether the matching score should be computed taking into account the synonyms extracted from the text file.
+- The *-l* option tells EAST about the language in which the texts in the collection and the ke
