@@ -39,4 +39,6 @@ The basic use case for the AST method is to calculate matching scores for a set 
 - The *-y* option and determines whether the matching score should be computed taking into account the synonyms extracted from the text file.
 - The *-l* option tells EAST about the language in which the texts in the collection and the keyphrases are written. In general, EAST does not need this information to compute the AST similarity scores. However, it is used to compute the cosine similarity scores (in case the user prefers this relevance measure type). English is the default language; all possible values of this parameter are: *"danish"* / *"dutch"* / *"english"* / *"finnish"* / *"french"* / *"german"* / *"hungarian"* / *"italian"* / *"norwegian"* / *"porter"* / *"portuguese"* / *"romanian"* / *"russian"* / *"spanish"* / *"swedish"*.
 - The *-f* option specifies the format in which the table should be printed. The format is *XML* by default (see an example below); the *-f* option can also take *CSV* as its parameter.
-- Please note that you can also specify the path to a single tex
+- Please note that you can also specify the path to a single text file instead of that for a directory. In case of the path to a directory, only *.txt* files will be processed.
+
+If you want to print the output to 
