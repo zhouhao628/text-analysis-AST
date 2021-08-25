@@ -41,4 +41,10 @@ The basic use case for the AST method is to calculate matching scores for a set 
 - The *-f* option specifies the format in which the table should be printed. The format is *XML* by default (see an example below); the *-f* option can also take *CSV* as its parameter.
 - Please note that you can also specify the path to a single text file instead of that for a directory. In case of the path to a directory, only *.txt* files will be processed.
 
-If you want to print the output to 
+If you want to print the output to some file, just redirect the *EAST* output (e.g. by appending *> filename.txt* to the command in Unix).
+
+Sample output in the XML format:
+
+::
+
+    <table>
