@@ -48,3 +48,7 @@ Sample output in the XML format:
 ::
 
     <table>
+      <keyphrase value="KEYPHRASE_1">
+        <text name="TEXT_1">0.250</text>
+        <text name="TEXT_2">0.234</text>
+      </keyphras
