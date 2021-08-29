@@ -56,4 +56,10 @@ Sample output in the XML format:
         <text name="TEXT_1">0.121</text>
         <text name="TEXT_2">0.000</text>
       </keyphrase>
-      <keyphr
+      <keyphrase value="KEYPHRASE_3">
+        <text name="TEXT_1">0.539</text>
+        <text name="TEXT_3">0.102</text>
+      </keyphrase>
+    </table>
+
+   
