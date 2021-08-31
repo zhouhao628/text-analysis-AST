@@ -62,4 +62,9 @@ Sample output in the XML format:
       </keyphrase>
     </table>
 
-   
+    
+
+Keyphrases graph
+~~~~~~~~~~~~~~~~
+
+The *east* software also allows to construct a **keyphrases relation graph**, which indicates implications between diffe
