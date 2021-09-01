@@ -67,4 +67,4 @@ Sample output in the XML format:
 Keyphrases graph
 ~~~~~~~~~~~~~~~~
 
-The *east* software also allows to construct a **keyphrases relation graph**, which indicates implications between diffe
+The *east* software also allows to construct a **keyphrases relation graph**, which indicates implications between different keyphrases according to the text corpus being analysed. The graph construction algorithm is based on the analysis of co-occurrences of keyphrases in the text c
