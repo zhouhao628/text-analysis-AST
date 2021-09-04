@@ -69,4 +69,6 @@ Keyphrases graph
 
 The *east* software also allows to construct a **keyphrases relation graph**, which indicates implications between different keyphrases according to the text corpus being analysed. The graph construction algorithm is based on the analysis of co-occurrences of keyphrases in the text corpus. A keyphrase is considered to imply another one if that second phrase occurs frequently enough in the same texts as the first one (that frequency is controlled by the referral confidence parameter). A keyphrase counts as occuring in a text if its presence score for that text ecxeeds some threshold *[Mirkin, Chernyak, & Chugunova, 2012]*.
 
-*$ east [-f <graph_format>] [-c <referral_confidence>] [-r <relevance_threshold>] [-p <support_threshold>] [-s] [-d] [-a 
+*$ east [-f <graph_format>] [-c <referral_confidence>] [-r <relevance_threshold>] [-p <support_threshold>] [-s] [-d] [-a <ast_algorithm>] [-w <term_weighting>] [-v <vector_space>] [-y] keyphrases graph <keyphrases_file> <directory_with_txt_files>*
+
+- The *-p* option 
