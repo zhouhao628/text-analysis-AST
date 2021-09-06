@@ -72,4 +72,5 @@ The *east* software also allows to construct a **keyphrases relation graph**, wh
 *$ east [-f <graph_format>] [-c <referral_confidence>] [-r <relevance_threshold>] [-p <support_threshold>] [-s] [-d] [-a <ast_algorithm>] [-w <term_weighting>] [-v <vector_space>] [-y] keyphrases graph <keyphrases_file> <directory_with_txt_files>*
 
 - The *-p* option configures the threshold for graph node support (the number of documents "containing" the corresponding keyphrase according to the AST method), starting with which the nodes get included into the graph.
-- The *-c* option controls the *referral confidence* level above which the implications between keyphrases 
+- The *-c* option controls the *referral confidence* level above which the implications between keyphrases are considered to be strong enough to be added as graph arcs. The confidence level should be a float in [0; 1] and is 0.6 by default.
+- The *-r* option controls t
