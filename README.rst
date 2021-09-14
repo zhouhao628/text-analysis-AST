@@ -73,4 +73,5 @@ The *east* software also allows to construct a **keyphrases relation graph**, wh
 
 - The *-p* option configures the threshold for graph node support (the number of documents "containing" the corresponding keyphrase according to the AST method), starting with which the nodes get included into the graph.
 - The *-c* option controls the *referral confidence* level above which the implications between keyphrases are considered to be strong enough to be added as graph arcs. The confidence level should be a float in [0; 1] and is 0.6 by default.
-- The *-r* option controls the  *relevance threshold of the matching score* - the minimum matching score value where keyphrases start to be counted as occuring in the 
+- The *-r* option controls the  *relevance threshold of the matching score* - the minimum matching score value where keyphrases start to be counted as occuring in the corresponding texts. It should be a float in [0; 1] and is 0.25 by default.
+- The *-f* option determines in which format the resulting graph should come to
