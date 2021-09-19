@@ -75,4 +75,5 @@ The *east* software also allows to construct a **keyphrases relation graph**, wh
 - The *-c* option controls the *referral confidence* level above which the implications between keyphrases are considered to be strong enough to be added as graph arcs. The confidence level should be a float in [0; 1] and is 0.6 by default.
 - The *-r* option controls the  *relevance threshold of the matching score* - the minimum matching score value where keyphrases start to be counted as occuring in the corresponding texts. It should be a float in [0; 1] and is 0.25 by default.
 - The *-f* option determines in which format the resulting graph should come to the output. Possible values are:
-    - *"gml"* (`Graph Modelling Language <http://en.wikipedia.org/wiki/Graph_Modelling_Language>`_, which can be
+    - *"gml"* (`Graph Modelling Language <http://en.wikipedia.org/wiki/Graph_Modelling_Language>`_, which can be used for graph visualization in tools like `Gephi <http://gephi.org>`_);
+    - *"edges"*, which is just a list of edges in form *Keyphrase -> <List of keyphrases it point
