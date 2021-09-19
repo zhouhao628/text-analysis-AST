@@ -76,4 +76,5 @@ The *east* software also allows to construct a **keyphrases relation graph**, wh
 - The *-r* option controls the  *relevance threshold of the matching score* - the minimum matching score value where keyphrases start to be counted as occuring in the corresponding texts. It should be a float in [0; 1] and is 0.25 by default.
 - The *-f* option determines in which format the resulting graph should come to the output. Possible values are:
     - *"gml"* (`Graph Modelling Language <http://en.wikipedia.org/wiki/Graph_Modelling_Language>`_, which can be used for graph visualization in tools like `Gephi <http://gephi.org>`_);
-    - *"edges"*, which is just a list of edges in form *Keyphrase -> <List of keyphrases it point
+    - *"edges"*, which is just a list of edges in form *Keyphrase -> <List of keyphrases it points to>* (simple but convenient for a quick analysis of implications between keyphrases).
+- The *-s* option, as well as i
