@@ -89,3 +89,17 @@ Sample output in the *edges* format:
     KEYPHRASE_4 -> KEYPHRASE_1
 
 The same graph in *gml*:
+
+::
+
+    graph
+    [
+      node
+      [
+        id 0
+        label "KEYPHRASE_1"
+      ]
+      node
+      [
+        id 1
+        label "KEYPHRASE_2"
