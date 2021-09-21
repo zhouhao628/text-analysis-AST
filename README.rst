@@ -80,4 +80,12 @@ The *east* software also allows to construct a **keyphrases relation graph**, wh
 - The *-s* option, as well as its auxiliary options (*-d*, *-a*, *-v*, *-w* and *-y*) configure the relevance scores computation (exactly as for the *keyphrases table* command). Note that the relevance measure (*"ast"* / *"cosine"*) used while computing the graph usually largely influences its shape.
 
 
-Sample output in the *edges* fo
+Sample output in the *edges* format:
+
+::
+
+    KEYPHRASE_1 -> KEYPHRASE_3
+    KEYPHRASE_2 -> KEYPHRASE_3, KEYPHRASE_4
+    KEYPHRASE_4 -> KEYPHRASE_1
+
+The same graph in *gml*:
