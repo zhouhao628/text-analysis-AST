@@ -103,3 +103,15 @@ The same graph in *gml*:
       [
         id 1
         label "KEYPHRASE_2"
+      ]
+      node
+      [
+        id 2
+        label "KEYPHRASE_3"
+      ]
+      node
+      [
+        id 3
+        label "KEYPHRASE_4"
+      ]
+  
