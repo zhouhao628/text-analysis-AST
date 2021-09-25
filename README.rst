@@ -126,4 +126,18 @@ The same graph in *gml*:
       ]
       edge
       [
-     
+        source 1
+        target 3
+      ]
+      edge
+      [
+        source 3
+        target 0
+      ]
+    ]
+
+
+Python library
+------------------------
+
+The ex
