@@ -114,4 +114,16 @@ The same graph in *gml*:
         id 3
         label "KEYPHRASE_4"
       ]
-  
+      edge
+      [
+        source 0
+        target 2
+      ]
+      edge
+      [
+        source 1
+        target 2
+      ]
+      edge
+      [
+     
