@@ -152,4 +152,4 @@ The example below shows how to use the *EAST* package in code. Here, we build an
     print ast.score("NOPE")   *# 0*
 
 
-The *get_ast()* method takes the list of input strings and construc
+The *get_ast()* method takes the list of input strings and constructs an annotated suffix tree using suffix arrays by default as the underlying data structure (this is the most efficient implementation known). The algorith
