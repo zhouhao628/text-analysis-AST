@@ -146,4 +146,10 @@ The example below shows how to use the *EAST* package in code. Here, we build an
 
     from east.asts import base
 
-    ast = base.AST.get
+    ast = base.AST.get_ast(["XABXAC", "HI"])
+
+    print ast.score("ABCI")   *# 0.1875*
+    print ast.score("NOPE")   *# 0*
+
+
+The *get_ast()* method takes the list of input strings and construc
