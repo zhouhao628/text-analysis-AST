@@ -140,4 +140,10 @@ The same graph in *gml*:
 Python library
 ------------------------
 
-The example below shows how to use the *EAST* package in code. Here, we build an Annotated suffix tree for a collection of two strings (*"XABXAC"* and *"HI"*) a
+The example below shows how to use the *EAST* package in code. Here, we build an Annotated suffix tree for a collection of two strings (*"XABXAC"* and *"HI"*) and then calculate matching scores for two queries (*"ABCI"* and *"NOPE"*):
+
+.. parsed-literal::
+
+    from east.asts import base
+
+    ast = base.AST.get
