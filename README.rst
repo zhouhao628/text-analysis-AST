@@ -140,4 +140,4 @@ The same graph in *gml*:
 Python library
 ------------------------
 
-The ex
+The example below shows how to use the *EAST* package in code. Here, we build an Annotated suffix tree for a collection of two strings (*"XABXAC"* and *"HI"*) a
