@@ -154,4 +154,4 @@ The example below shows how to use the *EAST* package in code. Here, we build an
 
 The *get_ast()* method takes the list of input strings and constructs an annotated suffix tree using suffix arrays by default as the underlying data structure (this is the most efficient implementation known). The algorithm used for AST construction can be optionally specified via the second parameter to *get_ast()* (along with *"easa"*, its possible values include *"ast_linear"* and *"ast_naive"*)
 
-Working with real texts already requires some preprocessing, such as splitting a single input text into a collection of small-size
+Working with real texts already requires some preprocessing, such as splitting a single input text into a collection of small-sized strings, which later enables matching scores for queries to be more precise. There is a special method *text_to_strings_collection()* in *EAST* which does that f
