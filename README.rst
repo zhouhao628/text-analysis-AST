@@ -158,4 +158,10 @@ Working with real texts already requires some preprocessing, such as splitting a
 
 .. parsed-literal::
 
-    from east.asts 
+    from east.asts import base
+    from east import utils
+
+    *# Prepare your text collection (e.g. from a set of *.txt files)*
+    text_collection = [...]
+
+    *# Transform the lis
