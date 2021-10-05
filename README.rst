@@ -164,4 +164,6 @@ Working with real texts already requires some preprocessing, such as splitting a
     *# Prepare your text collection (e.g. from a set of *.txt files)*
     text_collection = [...]
 
-    *# Transform the lis
+    *# Transform the list of texts into a list of shorter substrings
+    # (this will improve the precision of relevance scores)*
+    strings_collection = text_collection_to_string_
