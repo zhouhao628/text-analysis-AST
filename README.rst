@@ -171,4 +171,6 @@ Working with real texts already requires some preprocessing, such as splitting a
     *# Construct an AST for these strings*
     ast = base.AST.get_ast(strings_collection)
 
-    *# Compute the relevance of a key
+    *# Compute the relevance of a keyphrase to the text collection indexed by this AST.
+    # The relevance score will always be in [0; 1]*
+    print ast.score("Hello, world")
