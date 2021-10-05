@@ -166,4 +166,9 @@ Working with real texts already requires some preprocessing, such as splitting a
 
     *# Transform the list of texts into a list of shorter substrings
     # (this will improve the precision of relevance scores)*
-    strings_collection = text_collection_to_string_
+    strings_collection = text_collection_to_string_collection(text_collection)
+
+    *# Construct an AST for these strings*
+    ast = base.AST.get_ast(strings_collection)
+
+    *# Compute the relevance of a key
