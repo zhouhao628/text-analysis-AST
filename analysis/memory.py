@@ -29,4 +29,8 @@ def main(args):
 
     repeats = 2  # for each n
 
-    p
+    print ast_algorithm
+    for n in xrange(n_from, n_to + 1, n_step):
+        asts = []
+        for _ in xrange(repeats):
+            strings_collection = utils.
