@@ -14,4 +14,13 @@ from east.asts import base
 def memory_usage():
     # return the memory usage in MB
     process = psutil.Process(os.getpid())
-    mem = process.get_memory_info()[0] / f
+    mem = process.get_memory_info()[0] / float(2 ** 20)
+    return mem
+
+
+def main(args):
+    opts, args = getopt.getopt(args, "")
+
+    ast_algorithm = args[0]
+    n_from = int(args[1])
+    n_to = int(arg
