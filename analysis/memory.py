@@ -23,4 +23,10 @@ def main(args):
 
     ast_algorithm = args[0]
     n_from = int(args[1])
-    n_to = int(arg
+    n_to = int(args[2])
+    n_step = int(args[3]) if len(args) >= 4 else 1
+    m = int(args[4]) if len(args) >= 5 else 100
+
+    repeats = 2  # for each n
+
+    p
