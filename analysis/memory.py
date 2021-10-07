@@ -33,4 +33,7 @@ def main(args):
     for n in xrange(n_from, n_to + 1, n_step):
         asts = []
         for _ in xrange(repeats):
-            strings_collection = utils.
+            strings_collection = utils.worst_case_strings_collection(m, n)
+            ast = base.AST.get_ast(strings_collection, ast_algorithm)
+            asts.append(ast)
+        print("%i\t%.2f" %
