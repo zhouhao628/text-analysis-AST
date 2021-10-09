@@ -36,4 +36,12 @@ def main(args):
             strings_collection = utils.worst_case_strings_collection(m, n)
             ast = base.AST.get_ast(strings_collection, ast_algorithm)
             asts.append(ast)
-        print("%i\t%.2f" %
+        print("%i\t%.2f" % (n, memory_usage() / repeats))
+        for ast in asts:
+            del ast
+        gc.collect()
+    print ""
+
+
+if __name__ == '__main__':
+    main(sys.argv[1
