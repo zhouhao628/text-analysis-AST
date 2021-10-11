@@ -13,4 +13,6 @@ def main(args):
     synonimizer = synonyms.SynonymExtractor(path)
     print "Prepared synonimizer\n"
 
-    synonym_dicts = synonimizer.get_s
+    synonym_dicts = synonimizer.get_synonyms(threshold=0.3, return_similarity_measure=True)
+    for w1 in synonym_dicts:
+        syn_str = ["%s (%.2f)" % (w2, sim) for w2, sim in syn
