@@ -11,4 +11,7 @@ from east import utils
 def keyphrases_table(keyphrases, texts, similarity_measure=None, synonimizer=None,
                      language=consts.Language.ENGLISH):
     """
-    Constructs the keyphrases table, containing thei
+    Constructs the keyphrases table, containing their matching scores in a set of texts.
+
+    The resulting table is stored as a dictionary of dictionaries,
+    where the entry table["keyphrase"]["text"] cor
