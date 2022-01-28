@@ -14,4 +14,9 @@ def keyphrases_table(keyphrases, texts, similarity_measure=None, synonimizer=Non
     Constructs the keyphrases table, containing their matching scores in a set of texts.
 
     The resulting table is stored as a dictionary of dictionaries,
-    where the entry table["keyphrase"]["text"] cor
+    where the entry table["keyphrase"]["text"] corresponds
+    to the matching score (0 <= score <= 1) of keyphrase "keyphrase"
+    in the text named "text".
+    
+    :param keyphrases: list of strings
+    :param texts: dictiona
