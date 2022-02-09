@@ -35,4 +35,7 @@ def keyphrases_table(keyphrases, texts, similarity_measure=None, synonimizer=Non
     similarity_measure.set_text_collection(text_collection, language)
 
     i = 0
-    keyphrases_prepared = {keyphrase: utils.prepare_text(keyphr
+    keyphrases_prepared = {keyphrase: utils.prepare_text(keyphrase)
+                           for keyphrase in keyphrases}
+    total_keyphrases = len(keyphrases)
+    total_scores = len(text_collection) * total_keyph
