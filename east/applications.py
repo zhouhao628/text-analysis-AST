@@ -22,4 +22,7 @@ def keyphrases_table(keyphrases, texts, similarity_measure=None, synonimizer=Non
     :param texts: dictionary of form {text_name: text}
     :param similarity_measure: similarity measure to use
     :param synonimizer: SynonymExtractor object to be used
-    :param language: Languag
+    :param language: Language of the text collection / keyphrases
+
+    :returns: dictionary of dictionaries, having keyphrases on its first level and texts
+              on the 
