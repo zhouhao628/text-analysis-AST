@@ -31,4 +31,8 @@ def keyphrases_table(keyphrases, texts, similarity_measure=None, synonimizer=Non
     similarity_measure = similarity_measure or relevance.ASTRelevanceMeasure()
 
     text_titles = texts.keys()
-    text_collecti
+    text_collection = texts.values()
+    similarity_measure.set_text_collection(text_collection, language)
+
+    i = 0
+    keyphrases_prepared = {keyphrase: utils.prepare_text(keyphr
