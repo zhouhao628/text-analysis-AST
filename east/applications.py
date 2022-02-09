@@ -25,4 +25,10 @@ def keyphrases_table(keyphrases, texts, similarity_measure=None, synonimizer=Non
     :param language: Language of the text collection / keyphrases
 
     :returns: dictionary of dictionaries, having keyphrases on its first level and texts
-              on the 
+              on the second level.
+    """
+
+    similarity_measure = similarity_measure or relevance.ASTRelevanceMeasure()
+
+    text_titles = texts.keys()
+    text_collecti
