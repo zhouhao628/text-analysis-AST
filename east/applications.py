@@ -38,4 +38,10 @@ def keyphrases_table(keyphrases, texts, similarity_measure=None, synonimizer=Non
     keyphrases_prepared = {keyphrase: utils.prepare_text(keyphrase)
                            for keyphrase in keyphrases}
     total_keyphrases = len(keyphrases)
-    total_scores = len(text_collection) * total_keyph
+    total_scores = len(text_collection) * total_keyphrases
+    res = {}
+    for keyphrase in keyphrases:
+        if not keyphrase:
+            continue
+        res[keyphrase] = {}
+        for j in xrange(len(t
