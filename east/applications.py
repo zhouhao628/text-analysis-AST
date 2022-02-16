@@ -56,4 +56,6 @@ def keyphrases_table(keyphrases, texts, similarity_measure=None, synonimizer=Non
     return res
 
 
-def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relev
+def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_threshold=0.25,
+                     support_threshold=1, similarity_measure=None, synonimizer=None,
+                     language=consts.Language.ENGLI
