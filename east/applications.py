@@ -58,4 +58,8 @@ def keyphrases_table(keyphrases, texts, similarity_measure=None, synonimizer=Non
 
 def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_threshold=0.25,
                      support_threshold=1, similarity_measure=None, synonimizer=None,
-                     language=consts.Language.ENGLI
+                     language=consts.Language.ENGLISH):
+    """
+    Constructs the keyphrases relation graph based on the given texts corpus.
+
+    The graph construction algorithm is based on the analy
