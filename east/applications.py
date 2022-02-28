@@ -62,4 +62,6 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
     """
     Constructs the keyphrases relation graph based on the given texts corpus.
 
-    The graph construction algorithm is based on the analy
+    The graph construction algorithm is based on the analysis of co-occurrences of key phrases
+    in the text corpus. A key phrase is considered to imply another one if that second phrase
+    occurs frequently enough in the
