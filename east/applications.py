@@ -64,4 +64,5 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
 
     The graph construction algorithm is based on the analysis of co-occurrences of key phrases
     in the text corpus. A key phrase is considered to imply another one if that second phrase
-    occurs frequently enough in the
+    occurs frequently enough in the same texts as the first one (that frequency is controlled
+    by the referral_confidence). A keyphrase counts as occuring in a text if its matchi
