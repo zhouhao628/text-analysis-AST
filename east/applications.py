@@ -69,4 +69,6 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
     for that text ecxeeds some threshold (Mirkin, Chernyak, & Chugunova, 2012).
 
     :param keyphrases: list of unicode strings
-    :p
+    :param texts: dictionary of form {text_name: text}
+    :param referral_confidence: significance level of the graph in [0; 1], 0.6 by default
+    :param relevance_threshold:
