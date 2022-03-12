@@ -74,4 +74,6 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
     :param relevance_threshold: threshold for the matching score in [0; 1] where a keyphrase starts
                                 to be considered as occuring in the corresponding text;
                                 the defaul value is 0.25
-    :param support_threshold: threshold for the support of a node (the number o
+    :param support_threshold: threshold for the support of a node (the number of documents
+                              containing the corresponding keyphrase) such that it can be included
+                         
