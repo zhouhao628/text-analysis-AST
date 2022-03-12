@@ -72,4 +72,6 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
     :param texts: dictionary of form {text_name: text}
     :param referral_confidence: significance level of the graph in [0; 1], 0.6 by default
     :param relevance_threshold: threshold for the matching score in [0; 1] where a keyphrase starts
-                                to be considered as occuring in the corresponding text
+                                to be considered as occuring in the corresponding text;
+                                the defaul value is 0.25
+    :param support_threshold: threshold for the support of a node (the number o
