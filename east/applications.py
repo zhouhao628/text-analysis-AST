@@ -76,4 +76,7 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
                                 the defaul value is 0.25
     :param support_threshold: threshold for the support of a node (the number of documents
                               containing the corresponding keyphrase) such that it can be included
-                         
+                              into the graph
+    :param similarity_measure: Similarity measure to use
+    :param synonimizer: SynonymExtractor object to be used
+    :param 
