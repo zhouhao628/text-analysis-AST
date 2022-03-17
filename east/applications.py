@@ -79,4 +79,9 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
                               into the graph
     :param similarity_measure: Similarity measure to use
     :param synonimizer: SynonymExtractor object to be used
-    :param 
+    :param language: Language of the text collection / keyphrases
+
+    :returns: graph dictionary in a the following format:
+                {
+                    "nodes": [
+   
