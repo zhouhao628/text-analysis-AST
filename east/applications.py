@@ -84,4 +84,7 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
     :returns: graph dictionary in a the following format:
                 {
                     "nodes": [
-   
+                        {
+                            "id": <id>,
+                            "label": "keyphrase",
+                            "s
