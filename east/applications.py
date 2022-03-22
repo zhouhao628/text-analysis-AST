@@ -94,4 +94,8 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
                     "edges": [
                         {
                             "source": "node_id",
-                            "target": "node_id
+                            "target": "node_id",
+                            "confidence": <confidence_level>
+                        },
+                        ...
+                    ]
