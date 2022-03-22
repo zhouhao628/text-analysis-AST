@@ -87,4 +87,8 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
                         {
                             "id": <id>,
                             "label": "keyphrase",
-                            "s
+                            "support": <# of documents containing the keyphrase>
+                        },
+                        ...
+                    ]
+     
