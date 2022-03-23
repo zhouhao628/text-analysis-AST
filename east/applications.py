@@ -107,4 +107,7 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
     # Keyphrases table
     table = keyphrases_table(keyphrases, texts, similarity_measure, synonimizer, language)
     
-    # Dictionary { "keyphrase" => set(names of texts containing "keyphrase")
+    # Dictionary { "keyphrase" => set(names of texts containing "keyphrase") }
+    keyphrase_texts = {keyphrase: set([text for text in texts
+                                       if table[keyphrase][text] >= relevance_threshold])
+               
