@@ -99,3 +99,10 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
                         },
                         ...
                     ]
+                }
+    """
+
+    similarity_measure = similarity_measure or relevance.ASTRelevanceMeasure()
+
+    # Keyphrases table
+    table = keyphr
