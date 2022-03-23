@@ -110,4 +110,11 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
     # Dictionary { "keyphrase" => set(names of texts containing "keyphrase") }
     keyphrase_texts = {keyphrase: set([text for text in texts
                                        if table[keyphrase][text] >= relevance_threshold])
-               
+                       for keyphrase in keyphrases}
+
+    # Initializing the graph object with nodes
+    graph = {
+        "nodes": [
+            {
+                "id": i,
+                "
