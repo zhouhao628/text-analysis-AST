@@ -105,4 +105,6 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
     similarity_measure = similarity_measure or relevance.ASTRelevanceMeasure()
 
     # Keyphrases table
-    table = keyphr
+    table = keyphrases_table(keyphrases, texts, similarity_measure, synonimizer, language)
+    
+    # Dictionary { "keyphrase" => set(names of texts containing "keyphrase")
