@@ -117,4 +117,8 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
         "nodes": [
             {
                 "id": i,
-                "
+                "label": keyphrase,
+                "support": len(keyphrase_texts[keyphrase])
+            } for i, keyphrase in enumerate(keyphrases)
+        ],
+       
