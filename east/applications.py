@@ -128,4 +128,8 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
     }
 
     # Removing nodes with small support after we've numbered all nodes
-    graph["nodes"] = [n for n in graph["node
+    graph["nodes"] = [n for n in graph["nodes"]
+                      if len(keyphrase_texts[n["label"]]) >= support_threshold]
+    
+    # Creating edges
+    # NOTE(msdubov): permutations(), unlike c
