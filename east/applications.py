@@ -134,4 +134,7 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
     # Creating edges
     # NOTE(msdubov): permutations(), unlike combinations(), treats (1,2) and (2,1) as different
     for i1, i2 in itertools.permutations(range(len(graph["nodes"])), 2):
-        node1 = graph["no
+        node1 = graph["nodes"][i1]
+        node2 = graph["nodes"][i2]
+        confidence = (float(len(keyphrase_texts[node1["label"]] &
+                                keyp
