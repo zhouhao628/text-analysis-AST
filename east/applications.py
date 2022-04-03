@@ -141,4 +141,9 @@ def keyphrases_graph(keyphrases, texts, referral_confidence=0.6, relevance_thres
                       max(len(keyphrase_texts[node1["label"]]), 1))
         if confidence >= referral_confidence:
             graph["edges"].append({
-   
+                "source": node1["id"],
+                "target": node2["id"],
+                "confidence": confidence
+            })
+            
+    return graph
