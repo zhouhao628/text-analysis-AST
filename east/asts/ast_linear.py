@@ -155,3 +155,55 @@ class LinearAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                         new_node.add_child(current_suffix_end)
                         if suffix_link_source_node:
                             # Define new suffix link
+                            suffix_link_source_node.suffix_link = new_node
+                        suffix_link_source_node = new_node
+                        current_suffix_end = new_node
+                    # Rule 3b
+                    else:
+                        suffix_link_source_node = None
+                        starting_continuation = continuation
+                        starting_node = current_suffix_end.parent
+                        starting_path = (si, ss, ss+g+1)
+                        break
+            
+            # Constant updating of all leafs, see [Gusfield {RUS}, p. 139]
+            starting_node._e[string_ind] += 1
+            
+            return starting_node, starting_path, starting_continuation
+                        
+        for m in xrange(len(strings_collection)):
+            # Check for phases 1..x that are already in tree
+            starting_phase, starting_node, starting_path = _ukkonen_first_phases(m)
+            starting_continuation = 0
+            # Perform phases (x+1)..n explicitly
+            for phase in xrange(starting_phase, len(strings_collection[m])):
+                starting_node, starting_path, starting_continuation = \
+                    _ukkonen_phase(m, phase, starting_node, starting_path, starting_continuation)
+                    
+        
+        ############################################################
+        ############################################################
+        ############################################################
+        
+        # 3. Delete degenerate first-level children
+        for k in root.children.keys():
+            (ss, si, se) = root.children[k].arc()
+            if (se - si == 1 and
+                ord(strings_collection[ss][si]) >= consts.String.UNICODE_SPECIAL_SYMBOLS_START):
+                del root.children[k]
+        
+        # 4. Make a depth-first bottom-up traversal and annotate
+        #    each node by the sum of its children;
+        #    each leaf is already annotated with '1'.
+        def _annotate(node):
+            weight = 0
+            for k in node.children:
+                if node.children[k].weight > 0:
+                    weight += node.children[k].weight
+                else:
+                    weight += _annotate(node.children[k])
+            node.weight = weight
+            return weight
+        _annotate(root)
+        
+        return root
