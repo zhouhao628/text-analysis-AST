@@ -164,3 +164,145 @@ class AnnotatedSuffixTree(base.AST):
             
         def conditional_probability(self):
             """
+            Calculates the conditional probability
+            of the first character in the node's substring;
+            see [Chernyak, section 2.3] for details
+            
+            """
+            return float(self.weight) / self.parent.weight
+            
+            
+        def arc(self):
+            """
+            Returns a tuple of form (str_ind, substr_start, substr_end)
+            that describes the substring that the current node contains
+            (can be also imagined as the label of the arc that poins to this node).
+            For the given strings_collection that will be
+            strings_collection[str_ind][substr_start:substr_end]
+            
+            """
+            (str_ind, substr_start, substr_end) = self._arc
+            if substr_end == -1:
+                substr_end = self._e[str_ind]
+            return (str_ind, substr_start, substr_end)
+        
+        
+        def arc_label(self):
+            (str_ind, substr_start, substr_end) = self.arc()
+            return self.strings_collection[str_ind][substr_start:substr_end]
+        
+            
+        def chose_arc(self, string):
+            """
+            Returns the child node, the arc to which is
+            labeled with a string that starts with the same
+            character as the 'string' parameter.
+            Returns None if no such arc exisits.
+            O(1) amortized time complexity
+            (since we use hash tables for storing children).
+            
+            """
+            if string[0] in self.children:
+                return self.children[string[0]]
+            elif not string[0]:
+                return self
+                
+            return None
+        
+        
+        def is_leaf(self):
+            """
+            Returns whether the node is a leaf.
+            
+            """
+            return not self.children and not self.is_root()
+            
+            
+        def is_root(self):
+            """
+            Returns whether the node is a root of the tree.
+            
+            """
+            return not self.parent
+        
+        
+        def path(self):
+            """
+            Returns a string that represents the path to the current node.
+            
+            """
+            res = ''
+            node = self
+            while not node.is_root():
+                (str_ind, substr_start, substr_end) = node.arc()
+                res = self.strings_collection[str_ind][substr_start:substr_end] + res
+                node = node.parent
+            return res
+        
+        
+        def equals(self, other):
+            """
+            Determines whether the current node equals to the other node;
+            that is, whether they have the same weight and equal children.
+            
+            """
+            if self.weight != other.weight:
+                return False
+            
+            if set(self.children.keys()) != set(other.children.keys()):
+                return False
+                
+            for k in self.children.keys():
+                if not self.children[k].equals(other.children[k]):
+                    return False
+                
+            return True
+            
+            
+        #######################################################
+        ######             T R A V E R S A L S           ######
+        #######################################################
+        
+        def traverse_depth_first_pre_order(self, callback):
+            """
+            Traverses the tree in depth-first top-down order,
+            calling the callback function in each node.
+            The callback function should take the node as its parameter.
+    
+            """
+            callback(self)
+            for k in self.children:
+                self.children[k].traverse_depth_first_pre_order(callback)
+                
+        def traverse_depth_first_post_order(self, callback):
+            """
+            Traverses the tree in depth-first bottom-up order,
+            calling the callback function in each node.
+            The callback function should take the node as its parameter.
+    
+            """
+            for k in self.children:
+                self.children[k].traverse_depth_first_post_order(callback)
+            callback(self)
+        
+        def traverse_breadth_first(self, callback, queue):
+            """
+            Traverses the tree in breadth-first top-down order,
+            calling the callback function in each node.
+            The callback function should take the node as its parameter.
+    
+            """
+            callback(self)
+            for k in self.children:
+                queue.append(self.children[k])
+            if queue:
+                queue[0].traverse_breadh_first_top_down(callback, queue[1:])
+            
+            
+        def __str__(self): 
+            """
+            Returns just the node annotation (for networkx graph drawing)
+            
+            """
+            return str(self.weight)
+            
