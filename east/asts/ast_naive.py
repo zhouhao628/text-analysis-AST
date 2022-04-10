@@ -18,4 +18,7 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
         """
         
         # 0. Add a unique character to each string in the collection,
-        #    to preser
+        #    to preserve simplicity while building the tree
+        strings_collection = utils.make_unique_endings(strings_collection)
+        
+        root = ast.AnnotatedSuffixTree.Node()
