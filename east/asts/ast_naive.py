@@ -13,4 +13,9 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
         """
         Naive generalized suffix tree construction algorithm,
         with quadratic [O(n_1^2 + ... + n_m^2)] worst-case time complexity,
-       
+        where m is the number of strings in collection.
+        
+        """
+        
+        # 0. Add a unique character to each string in the collection,
+        #    to preser
