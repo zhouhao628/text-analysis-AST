@@ -28,4 +28,7 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
         for string_ind in xrange(len(strings_collection)):
             string = strings_collection[string_ind]
             # For each suffix of that string...
-            # (do not ha
+            # (do not handle unique last characters as suffixes)
+            for suffix_start in xrange(len(string)-1):
+                suffix = string[suffix_start:]
+       
