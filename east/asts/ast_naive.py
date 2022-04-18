@@ -22,3 +22,7 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
         strings_collection = utils.make_unique_endings(strings_collection)
         
         root = ast.AnnotatedSuffixTree.Node()
+        root.strings_collection = strings_collection
+        
+        # For each string in the collection...
+        for string_ind in xrange(len(s
