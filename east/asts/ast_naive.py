@@ -25,4 +25,7 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
         root.strings_collection = strings_collection
         
         # For each string in the collection...
-        for string_ind in xrange(len(s
+        for string_ind in xrange(len(strings_collection)):
+            string = strings_collection[string_ind]
+            # For each suffix of that string...
+            # (do not ha
