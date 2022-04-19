@@ -31,4 +31,6 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
             # (do not handle unique last characters as suffixes)
             for suffix_start in xrange(len(string)-1):
                 suffix = string[suffix_start:]
-       
+                # ... first try to find maximal matching path
+                node = root
+                child_node = node.chose_arc(
