@@ -33,4 +33,7 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                 suffix = string[suffix_start:]
                 # ... first try to find maximal matching path
                 node = root
-                child_node = node.chose_arc(
+                child_node = node.chose_arc(suffix)
+                while child_node:
+                    (str_ind, substr_start, substr_end) = child_node.arc()
+                    match = utils.match_
