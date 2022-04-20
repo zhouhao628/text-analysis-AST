@@ -39,3 +39,6 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                     match = utils.match_strings(
                                 suffix, strings_collection[str_ind][substr_start:substr_end])
                     if match == substr_end-substr_start:
+                        # matched the arc, proceed with child node
+                        suffix = suffix[match:]
+                        s
