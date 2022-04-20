@@ -41,4 +41,8 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                     if match == substr_end-substr_start:
                         # matched the arc, proceed with child node
                         suffix = suffix[match:]
-                        s
+                        suffix_start += match
+                        node = child_node
+                        node.weight += 1
+                        child_node = node.chose_arc(suffix)
+    
