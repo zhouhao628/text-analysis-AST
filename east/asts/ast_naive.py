@@ -36,4 +36,6 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                 child_node = node.chose_arc(suffix)
                 while child_node:
                     (str_ind, substr_start, substr_end) = child_node.arc()
-                    match = utils.match_
+                    match = utils.match_strings(
+                                suffix, strings_collection[str_ind][substr_start:substr_end])
+                    if match == substr_end-substr_start:
