@@ -45,4 +45,7 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                         node = child_node
                         node.weight += 1
                         child_node = node.chose_arc(suffix)
-    
+                    else:
+                        # ... then, where the matching path ends;
+                        # create new inner node
+               
