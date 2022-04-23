@@ -50,4 +50,6 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                         # create new inner node
                         # (that's the only possible alternative
                         #  since we have unique string endings)
-                        node.remove_c
+                        node.remove_child(child_node)
+                        new_node = node.add_new_child(string_ind, suffix_start,
+                                                      suffix
