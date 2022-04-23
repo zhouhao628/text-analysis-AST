@@ -48,4 +48,6 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                     else:
                         # ... then, where the matching path ends;
                         # create new inner node
-               
+                        # (that's the only possible alternative
+                        #  since we have unique string endings)
+                        node.remove_c
