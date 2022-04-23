@@ -54,4 +54,7 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                         new_node = node.add_new_child(string_ind, suffix_start,
                                                       suffix_start+match)
                         new_leaf = new_node.add_new_child(string_ind, suffix_start+match,
-                                                
+                                                          len(string))
+                        (osi, oss, ose) = child_node._arc
+                        child_node._arc = (osi, oss+match, ose)
+       
