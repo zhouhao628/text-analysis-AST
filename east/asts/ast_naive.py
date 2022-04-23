@@ -52,4 +52,6 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                         #  since we have unique string endings)
                         node.remove_child(child_node)
                         new_node = node.add_new_child(string_ind, suffix_start,
-                                                      suffix
+                                                      suffix_start+match)
+                        new_leaf = new_node.add_new_child(string_ind, suffix_start+match,
+                                                
