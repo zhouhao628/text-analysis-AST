@@ -57,4 +57,6 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                                                           len(string))
                         (osi, oss, ose) = child_node._arc
                         child_node._arc = (osi, oss+match, ose)
-       
+                        new_node.add_child(child_node)
+                        new_leaf.weight = 1
+                        new_node.weight = 1 + child_node.w
