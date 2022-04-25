@@ -59,4 +59,8 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                         child_node._arc = (osi, oss+match, ose)
                         new_node.add_child(child_node)
                         new_leaf.weight = 1
-                        new_node.weight = 1 + child_node.w
+                        new_node.weight = 1 + child_node.weight
+                        suffix = ''
+                        break
+                        
+                # ... or create new leaf if there 
