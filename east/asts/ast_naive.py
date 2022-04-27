@@ -63,4 +63,6 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                         suffix = ''
                         break
                         
-                # ... or create new leaf if there 
+                # ... or create new leaf if there was no appropriate arc to proceed
+                if suffix:
+                    new_leaf = node.add_new_child(string_ind, suffix_start, len(stri
