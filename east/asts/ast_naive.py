@@ -65,4 +65,8 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                         
                 # ... or create new leaf if there was no appropriate arc to proceed
                 if suffix:
-                    new_leaf = node.add_new_child(string_ind, suffix_start, len(stri
+                    new_leaf = node.add_new_child(string_ind, suffix_start, len(string))
+                    new_leaf.weight = 1
+                    
+        # Root will also be annotated by the weight of its children,
+        # to preserve s
