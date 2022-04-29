@@ -73,4 +73,4 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
         for k in root.children:
             root.weight += root.children[k].weight
         
-        r
+        return root
