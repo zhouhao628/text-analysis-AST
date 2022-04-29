@@ -69,4 +69,8 @@ class NaiveAnnotatedSuffixTree(ast.AnnotatedSuffixTree):
                     new_leaf.weight = 1
                     
         # Root will also be annotated by the weight of its children,
-        # to preserve s
+        # to preserve simplicity while calculating string matching
+        for k in root.children:
+            root.weight += root.children[k].weight
+        
+        r
