@@ -19,4 +19,8 @@ class AST(object):
 
     def __init__(self, strings_collection):
         if not strings_collection:
-            raise except
+            raise exceptions.EmptyStringsCollectionException()
+
+    @abc.abstractmethod
+    def score(self, query, normalized=True, synonimizer=None, return_suffix_scores=False):
+     
