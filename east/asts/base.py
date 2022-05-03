@@ -23,4 +23,6 @@ class AST(object):
 
     @abc.abstractmethod
     def score(self, query, normalized=True, synonimizer=None, return_suffix_scores=False):
-     
+        """Computes the matching score for the given string against the AST."""
+
+    def traverse(self, callback, order=consts.TraversalO
