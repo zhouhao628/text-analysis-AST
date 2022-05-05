@@ -28,4 +28,6 @@ class AST(object):
     def traverse(self, callback, order=consts.TraversalOrder.DEPTH_FIRST_PRE_ORDER):        
         if order == consts.TraversalOrder.DEPTH_FIRST_PRE_ORDER:
             self.traverse_depth_first_pre_order(callback)
-  
+        elif order == consts.TraversalOrder.DEPTH_FIRST_POST_ORDER:
+            self.traverse_depth_first_post_order(callback)
+        elif 
