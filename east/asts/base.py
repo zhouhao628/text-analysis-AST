@@ -25,4 +25,7 @@ class AST(object):
     def score(self, query, normalized=True, synonimizer=None, return_suffix_scores=False):
         """Computes the matching score for the given string against the AST."""
 
-    def traverse(self, callback, order=consts.TraversalO
+    def traverse(self, callback, order=consts.TraversalOrder.DEPTH_FIRST_PRE_ORDER):        
+        if order == consts.TraversalOrder.DEPTH_FIRST_PRE_ORDER:
+            self.traverse_depth_first_pre_order(callback)
+  
