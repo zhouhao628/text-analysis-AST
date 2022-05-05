@@ -30,4 +30,8 @@ class AST(object):
             self.traverse_depth_first_pre_order(callback)
         elif order == consts.TraversalOrder.DEPTH_FIRST_POST_ORDER:
             self.traverse_depth_first_post_order(callback)
-        elif 
+        elif order == consts.TraversalOrder.BREADTH_FIRST:
+            self.traverse_breadth_first(callback)
+
+    @abc.abstractmethod
+    def traverse_depth_first_pre_order(se
