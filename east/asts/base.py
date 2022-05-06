@@ -34,4 +34,8 @@ class AST(object):
             self.traverse_breadth_first(callback)
 
     @abc.abstractmethod
-    def traverse_depth_first_pre_order(se
+    def traverse_depth_first_pre_order(self, callback):
+        """Traverses the annotated suffix tree in depth-first pre-order."""
+
+    @abc.abstractmethod
+    def traverse_depth_first_po
