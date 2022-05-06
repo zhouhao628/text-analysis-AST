@@ -38,4 +38,8 @@ class AST(object):
         """Traverses the annotated suffix tree in depth-first pre-order."""
 
     @abc.abstractmethod
-    def traverse_depth_first_po
+    def traverse_depth_first_post_order(self, callback):
+        """Traverses the annotated suffix tree in depth-first post-order."""
+
+    @abc.abstractmethod
+    def traverse_breadth_first(s
