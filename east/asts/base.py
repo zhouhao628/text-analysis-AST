@@ -42,4 +42,5 @@ class AST(object):
         """Traverses the annotated suffix tree in depth-first post-order."""
 
     @abc.abstractmethod
-    def traverse_breadth_first(s
+    def traverse_breadth_first(self, callback):
+        """Traverses the annotated suffix tree in breadth-first order."""
