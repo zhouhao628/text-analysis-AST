@@ -393,3 +393,9 @@ class EnhancedAnnotatedSuffixArray(base.AST):
                 return (self._lcp_value(i, i1 - 1), i, i1 - 1, self.string[self.suftab[i] + l])
         while self.childtab_next_l_index[i1] != 0:
             i2 = self.childtab_next_l_index[i1]
+            if self.string[self.suftab[i1] + l] == char:
+                return (self._lcp_value(i1, i2 - 1), i1, i2 - 1, self.string[self.suftab[i1] + l])
+            i1 = i2
+        if self.string[self.suftab[i1] + l] == char:
+            return (self._lcp_value(i1, j), i1, j, self.string[self.suftab[i1] + l])
+        return None
