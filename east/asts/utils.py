@@ -24,4 +24,6 @@ def match_strings(str1, str2):
 
 def make_unique_endings(strings_collection):
     """
-    Make each string in the collectio
+    Make each string in the collection end with a unique character.
+    Essential for correct builiding of a generalized annotated suffix tree.
+    Returns the updated strings col
