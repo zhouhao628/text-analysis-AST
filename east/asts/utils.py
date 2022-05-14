@@ -13,4 +13,9 @@ def index(array, key, start=0):
 
 def match_strings(str1, str2):
     """
-    Returns t
+    Returns the largest index i such that str1[:i] == str2[:i]
+    
+    """
+    i = 0
+    min_len = len(str1) if len(str1) < len(str2) else len(str2)
+    while i < mi
