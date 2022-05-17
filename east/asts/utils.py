@@ -26,4 +26,10 @@ def make_unique_endings(strings_collection):
     """
     Make each string in the collection end with a unique character.
     Essential for correct builiding of a generalized annotated suffix tree.
-    Returns the updated strings col
+    Returns the updated strings collection, encoded in Unicode.
+
+    max strings_collection ~ 1.100.000
+    
+    """
+    res = []
+    for i in range(len(strings_collecti
