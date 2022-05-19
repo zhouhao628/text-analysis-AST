@@ -32,4 +32,6 @@ def make_unique_endings(strings_collection):
     
     """
     res = []
-    for i in range(len(strings_collecti
+    for i in range(len(strings_collection)):
+        # NOTE(msdubov): a trick to handle 'narrow' python installation issues.
+        hex_code = hex(consts.String.UNICODE_SPECIAL_SYMBOLS_START+i
