@@ -37,4 +37,4 @@ def make_unique_endings(strings_collection):
         hex_code = hex(consts.String.UNICODE_SPECIAL_SYMBOLS_START+i)
         hex_code = r"\U" + "0" * (8 - len(hex_code) + 2) + hex_code[2:]
         res.append(strings_collection[i] + hex_code.decode("unicode-escape"))
-    ret
+    return res
