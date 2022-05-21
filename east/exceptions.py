@@ -18,4 +18,10 @@ class EastException(Exception):
         if 'code' not in self.kwargs:
             try:
                 self.kwargs['code'] = self.code
-            exce
+            except AttributeError:
+                pass
+
+        if not message:
+            try:
+                message = self.msg_fmt % kwargs
+        
