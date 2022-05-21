@@ -12,4 +12,10 @@ class EastException(Exception):
     """
     msg_fmt = "An unknown exception occurred."
 
-    def __init__(self, message=None, **kwargs)
+    def __init__(self, message=None, **kwargs):
+        self.kwargs = kwargs
+
+        if 'code' not in self.kwargs:
+            try:
+                self.kwargs['code'] = self.code
+            exce
