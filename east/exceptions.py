@@ -24,4 +24,7 @@ class EastException(Exception):
         if not message:
             try:
                 message = self.msg_fmt % kwargs
-        
+            except KeyError:
+                exc_info = sys.exc_info()
+                # kwargs doesn't match a variable in the message
+                #
