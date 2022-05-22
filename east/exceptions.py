@@ -27,4 +27,6 @@ class EastException(Exception):
             except KeyError:
                 exc_info = sys.exc_info()
                 # kwargs doesn't match a variable in the message
-                #
+                # log the issue and the kwargs
+                msg = "kwargs don't match in string format operation: %s"
+                LOG.debug(msg % kwargs, 
