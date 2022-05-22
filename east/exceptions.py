@@ -29,4 +29,9 @@ class EastException(Exception):
                 # kwargs doesn't match a variable in the message
                 # log the issue and the kwargs
                 msg = "kwargs don't match in string format operation: %s"
-                LOG.debug(msg % kwargs, 
+                LOG.debug(msg % kwargs, exc_info=exc_info)
+
+                if CONF.fatal_exception_format_errors:
+                    raise exc_info[0], exc_info[1], exc_info[2]
+                else:
+                 
