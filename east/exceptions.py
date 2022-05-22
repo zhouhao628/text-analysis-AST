@@ -34,4 +34,7 @@ class EastException(Exception):
                 if CONF.fatal_exception_format_errors:
                     raise exc_info[0], exc_info[1], exc_info[2]
                 else:
-                 
+                    # at least get the core message out if something happened
+                    message = self.msg_fmt
+
+        super(EastException, self).
