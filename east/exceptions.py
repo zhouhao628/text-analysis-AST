@@ -43,4 +43,12 @@ class EastException(Exception):
         if self.__class__.__name__.endswith('_Remote'):
             return self.args[0]
         else:
-      
+            return unicode(self)
+
+
+class NotFoundException(EastException):
+    msg_fmt = "Not found."
+
+
+class NoSuchASTAlgorithm(NotFoundException):
+    msg_fmt = "There is
