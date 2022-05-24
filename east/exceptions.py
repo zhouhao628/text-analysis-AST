@@ -51,4 +51,8 @@ class NotFoundException(EastException):
 
 
 class NoSuchASTAlgorithm(NotFoundException):
-    msg_fmt = "There is
+    msg_fmt = "There is no AST construction algorithm with name `%(name)s`."
+
+
+class TomitaNotInstalledException(EastException):
+    msg_fmt = ("Please, add the t
