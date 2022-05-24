@@ -37,4 +37,10 @@ class EastException(Exception):
                     # at least get the core message out if something happened
                     message = self.msg_fmt
 
-        super(EastException, self).
+        super(EastException, self).__init__(message)
+
+    def format_message(self):
+        if self.__class__.__name__.endswith('_Remote'):
+            return self.args[0]
+        else:
+      
