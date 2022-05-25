@@ -6,4 +6,10 @@ def format_table(table, format):
         return table2xml(keyphrases_table)
     elif format == "csv":
         return table2csv(keyphrases_table)
-    else
+    else:
+        raise Exception("Unknown table format: '%s'. "
+                        "Please use one of: 'xml', 'csv'." % format)
+
+
+def table2xml(keyphrases_table):
+  
