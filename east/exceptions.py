@@ -55,4 +55,6 @@ class NoSuchASTAlgorithm(NotFoundException):
 
 
 class TomitaNotInstalledException(EastException):
-    msg_fmt = ("Please, add the t
+    msg_fmt = ("Please, add the tomita distribution corresponding to your operating system "
+               "to `tools/tomita`. The tomita binary file can be downloaded from %s" %
+      
