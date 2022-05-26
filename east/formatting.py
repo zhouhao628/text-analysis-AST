@@ -12,4 +12,6 @@ def format_table(table, format):
 
 
 def table2xml(keyphrases_table):
-  
+    res = "<table>\n"
+    for keyphrase in sorted(keyphrases_table.keys()):
+        res += '  <keyphrase value="%s">\n' % keyphr
