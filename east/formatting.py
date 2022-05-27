@@ -26,3 +26,8 @@ def table2xml(keyphrases_table):
 
 def table2csv(keyphrases_table):
 
+    def quote(s):
+        return '"' + s.replace('"', "'") + '"'
+
+    keyphrases = sorted(keyphrases_table.keys())
+    texts = sorted(keyphrases_t
