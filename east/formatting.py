@@ -17,4 +17,12 @@ def table2xml(keyphrases_table):
         res += '  <keyphrase value="%s">\n' % keyphrase
         for text in sorted(keyphrases_table[keyphrase].keys()):
             res += '    <text name="%s">' % text
-            res += '%.3f' % keyphrases_table[keyp
+            res += '%.3f' % keyphrases_table[keyphrase][text]
+            res += '</text>\n'
+        res += '  </keyphrase>\n'
+    res += "</table>\n"
+    return res
+
+
+def table2csv(keyphrases_table):
+
