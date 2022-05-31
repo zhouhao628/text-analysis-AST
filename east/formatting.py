@@ -30,4 +30,7 @@ def table2csv(keyphrases_table):
         return '"' + s.replace('"', "'") + '"'
 
     keyphrases = sorted(keyphrases_table.keys())
-    texts = sorted(keyphrases_t
+    texts = sorted(keyphrases_table[keyphrases[0]].keys())
+    res = "," + ",".join(map(quote, keyphrases)) + "\n"  # Heading
+    for text in texts:
+        scores = map(lambda sc
