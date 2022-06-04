@@ -43,4 +43,10 @@ def format_graph(graph, format):
     if format == "gml":
         return graph2gml(graph)
     elif format == "edges":
-        r
+        return graph2edges(graph)
+    else:
+        raise Exception("Unknown graph format: '%s'. "
+                        "Please use one of: 'gml', 'edges'." % format)
+
+
+def g
