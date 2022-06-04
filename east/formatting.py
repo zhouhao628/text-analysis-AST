@@ -35,4 +35,12 @@ def table2csv(keyphrases_table):
     for text in texts:
         scores = map(lambda score: u"%.3f" % score,
                      [keyphrases_table[keyphrase][text] for keyphrase in keyphrases])
-        res += (quote(text) + "," + ",".jo
+        res += (quote(text) + "," + ",".join(scores) + "\n")
+    return res
+
+
+def format_graph(graph, format):
+    if format == "gml":
+        return graph2gml(graph)
+    elif format == "edges":
+        r
