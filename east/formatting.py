@@ -33,4 +33,6 @@ def table2csv(keyphrases_table):
     texts = sorted(keyphrases_table[keyphrases[0]].keys())
     res = "," + ",".join(map(quote, keyphrases)) + "\n"  # Heading
     for text in texts:
-        scores = map(lambda sc
+        scores = map(lambda score: u"%.3f" % score,
+                     [keyphrases_table[keyphrase][text] for keyphrase in keyphrases])
+        res += (quote(text) + "," + ",".jo
