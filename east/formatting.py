@@ -53,4 +53,7 @@ def graph2edges(graph):
     # TODO(mikhaildubov): Exception on the US constitution example!
     res = ""
     node_edges = {}
-    for edge in graph["edges
+    for edge in graph["edges"]:
+        source_label = graph["nodes"][edge["source"]]["label"]
+        target_label = graph["nodes"][edge["target"]]["label"]
+        if source_label not
