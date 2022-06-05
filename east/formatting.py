@@ -49,4 +49,8 @@ def format_graph(graph, format):
                         "Please use one of: 'gml', 'edges'." % format)
 
 
-def g
+def graph2edges(graph):
+    # TODO(mikhaildubov): Exception on the US constitution example!
+    res = ""
+    node_edges = {}
+    for edge in graph["edges
