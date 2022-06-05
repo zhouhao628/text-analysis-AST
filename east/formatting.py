@@ -56,4 +56,7 @@ def graph2edges(graph):
     for edge in graph["edges"]:
         source_label = graph["nodes"][edge["source"]]["label"]
         target_label = graph["nodes"][edge["target"]]["label"]
-        if source_label not
+        if source_label not in node_edges:
+            node_edges[source_label] = []
+        node_edges[source_label].append(target_label)
+    for node in node_
