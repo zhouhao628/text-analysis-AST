@@ -59,4 +59,11 @@ def graph2edges(graph):
         if source_label not in node_edges:
             node_edges[source_label] = []
         node_edges[source_label].append(target_label)
-    for node in node_
+    for node in node_edges:
+        res += "%s -> %s\n" % (node, ", ".join(node_edges[node]))
+    return res
+
+
+def graph2gml(graph):
+    res = "graph\n[\n"
+    res += "  d
