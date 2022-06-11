@@ -71,4 +71,7 @@ def graph2gml(graph):
     res += "  relevance_threshold %.2f\n" % graph["relevance_threshold"]
     res += "  support_threshold %i\n" % graph["support_threshold"]
     for node in graph["nodes"]:
-        res += ('  node\n  [\n    id %i\n    label "%s"\n
+        res += ('  node\n  [\n    id %i\n    label "%s"\n  ]\n' %
+                (node["id"], node["label"]))
+    for edge in graph["edges"]:
+        res += ('  edge\n  [\n    source %i\n    target %i\n    
