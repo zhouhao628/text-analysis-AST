@@ -13,4 +13,5 @@ def progress(message, step, total):
 
 def clear():
     if not utils.output_is_redirected():
-        sys.stdout.write("\r" + "
+        sys.stdout.write("\r" + " " * 80 + "\r")
+        sys.stdout.flush()
