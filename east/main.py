@@ -101,3 +101,57 @@ def main():
             vector_space = opts["-v"]
             term_weighting = opts["-w"]
             similarity_measure = relevance.CosineRelevanceMeasure(vector_space, term_weighting)
+
+        # Synomimizer
+        use_synonyms = "-y" in opts
+        synonimizer = synonyms.SynonymExtractor(text_collection_path) if use_synonyms else None
+
+        if subcommand == "table":
+
+            keyphrases_table = applications.keyphrases_table(
+                                    keyphrases, texts, similarity_measure_factory,
+                                    synonimizer, language)
+
+            opts.setdefault("-f", "xml")  # Table output format ("csv" is the other option)
+            table_format = opts["-f"].lower()
+
+            try:
+                res = formatting.format_table(keyphrases_table, table_format)
+                print res
+            except Exception as e:
+                print e
+                return 1
+
+        elif subcommand == "graph":
+
+            # Graph construction parameters: Referral confidence, relevance and support thresholds            
+            referral_confidence = float(opts["-c"])
+            relevance_threshold = float(opts["-r"])
+            support_threshold = float(opts["-p"])
+
+            graph = applications.keyphrases_graph(keyphrases, texts, referral_confidence,
+                                                  relevance_threshold, support_threshold,
+                                                  similarity_measure, synonimizer, language)
+
+            opts.setdefault("-f", "edges")  # Graph output format (also "gml" possible)
+            graph_format = opts["-f"].lower()
+
+            try:
+                res = formatting.format_graph(graph, graph_format)
+                print res
+            except Exception as e:
+                print e
+                return 1
+
+        else:
+            print "Invalid subcommand: '%s'. Please use one of: 'table', 'graph'." % subcommand
+            return 1
+
+    else:
+        print "Invalid command: '%s'. Please use one of: 'keyphrases'." % command
+        return 1
+
+
+
+if __name__ == "__main__":
+    main()
