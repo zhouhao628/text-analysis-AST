@@ -13,4 +13,9 @@ from east import logging
 from east import utils
 
 
-class RelevanceM
+class RelevanceMeasure(object):
+
+    def set_text_collection(self, texts, language=consts.Language.ENGLISH):
+        raise NotImplemented()
+
+    def relevance(self, keyphrase, text, 
