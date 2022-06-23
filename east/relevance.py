@@ -18,4 +18,6 @@ class RelevanceMeasure(object):
     def set_text_collection(self, texts, language=consts.Language.ENGLISH):
         raise NotImplemented()
 
-    def relevance(self, keyphrase, text, 
+    def relevance(self, keyphrase, text, synonimizer=None):
+        # text is the index of the text to measure the relevance to
+        # TODO(mikhaildubov): Add detailed docstrings
