@@ -31,4 +31,9 @@ class ASTRelevanceMeasure(RelevanceMeasure):
         self.ast_algorithm = ast_algorithm
         self.normalized = normalized
 
-    def set_t
+    def set_text_collection(self, texts, language=consts.Language.ENGLISH):
+        self.texts = texts
+        self.language = language
+
+        self.asts = []
+ 
