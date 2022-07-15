@@ -26,4 +26,9 @@ class RelevanceMeasure(object):
 
 class ASTRelevanceMeasure(RelevanceMeasure):
 
-    def __init__(self, ast_algorithm=consts.ASTAlgorithm.EASA,
+    def __init__(self, ast_algorithm=consts.ASTAlgorithm.EASA, normalized=True):
+        super(ASTRelevanceMeasure, self).__init__()
+        self.ast_algorithm = ast_algorithm
+        self.normalized = normalized
+
+    def set_t
