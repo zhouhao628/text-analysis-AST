@@ -21,3 +21,9 @@ class RelevanceMeasure(object):
     def relevance(self, keyphrase, text, synonimizer=None):
         # text is the index of the text to measure the relevance to
         # TODO(mikhaildubov): Add detailed docstrings
+        raise NotImplemented()
+
+
+class ASTRelevanceMeasure(RelevanceMeasure):
+
+    def __init__(self, ast_algorithm=consts.ASTAlgorithm.EASA,
