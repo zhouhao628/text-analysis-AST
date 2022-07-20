@@ -36,4 +36,8 @@ class ASTRelevanceMeasure(RelevanceMeasure):
         self.language = language
 
         self.asts = []
- 
+        total_texts = len(texts)
+
+        for i in xrange(total_texts):
+            # NOTE(mikhaildubov): utils.text_to_strings_collection()
+            #                     does
