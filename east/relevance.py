@@ -40,4 +40,6 @@ class ASTRelevanceMeasure(RelevanceMeasure):
 
         for i in xrange(total_texts):
             # NOTE(mikhaildubov): utils.text_to_strings_collection()
-            #                     does
+            #                     does utils.prepare_text() as well.
+            self.asts.append(base.AST.get_ast(
+                                    utils.text_to_strings_co
