@@ -42,4 +42,8 @@ class ASTRelevanceMeasure(RelevanceMeasure):
             # NOTE(mikhaildubov): utils.text_to_strings_collection()
             #                     does utils.prepare_text() as well.
             self.asts.append(base.AST.get_ast(
-                                    utils.text_to_strings_co
+                                    utils.text_to_strings_collection(texts[i]),
+                                    self.ast_algorithm))
+            logging.progress("Indexing texts with ASTs", i + 1, total_texts)
+
+        logging.clear
