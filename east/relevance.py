@@ -46,4 +46,7 @@ class ASTRelevanceMeasure(RelevanceMeasure):
                                     self.ast_algorithm))
             logging.progress("Indexing texts with ASTs", i + 1, total_texts)
 
-        logging.clear
+        logging.clear()
+
+    def relevance(self, keyphrase, text, synonimizer=None):
+        return self.asts[text].score(keyphrase, normalized=self.normalize
