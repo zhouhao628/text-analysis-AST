@@ -49,4 +49,10 @@ class ASTRelevanceMeasure(RelevanceMeasure):
         logging.clear()
 
     def relevance(self, keyphrase, text, synonimizer=None):
-        return self.asts[text].score(keyphrase, normalized=self.normalize
+        return self.asts[text].score(keyphrase, normalized=self.normalized,
+                                     synonimizer=synonimizer)
+
+
+class CosineRelevanceMeasure(RelevanceMeasure):
+
+    def __init__(self, vecto
