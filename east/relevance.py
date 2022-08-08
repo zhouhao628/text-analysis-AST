@@ -55,4 +55,6 @@ class ASTRelevanceMeasure(RelevanceMeasure):
 
 class CosineRelevanceMeasure(RelevanceMeasure):
 
-    def __init__(self, vecto
+    def __init__(self, vector_space=consts.VectorSpace.STEMS,
+                 term_weighting=consts.TermWeighting.TF_IDF):
+        super(CosineRelevanceMeasure, self).__init__()
