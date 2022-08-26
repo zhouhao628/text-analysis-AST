@@ -68,4 +68,6 @@ class CosineRelevanceMeasure(RelevanceMeasure):
             self.stemmer = snowball.SnowballStemmer(self.language)
         raw_tokens = []
         total_texts = len(texts)
-        for i in xrange(total_t
+        for i in xrange(total_texts):
+            raw_tokens.append(utils.tokenize_and_filter(utils.prepare_text(texts[i])))
+            logging.progress("Preparing texts", i + 1, tota
