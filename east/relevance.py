@@ -62,4 +62,6 @@ class CosineRelevanceMeasure(RelevanceMeasure):
         self.term_weighting = term_weighting
         
 
-    def set_text_collection(self,
+    def set_text_collection(self, texts, language=consts.Language.ENGLISH):
+        self.language = language
+        if self.vector_space == consts.VectorSpace.ST
