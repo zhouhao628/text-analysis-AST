@@ -64,4 +64,8 @@ class CosineRelevanceMeasure(RelevanceMeasure):
 
     def set_text_collection(self, texts, language=consts.Language.ENGLISH):
         self.language = language
-        if self.vector_space == consts.VectorSpace.ST
+        if self.vector_space == consts.VectorSpace.STEMS:
+            self.stemmer = snowball.SnowballStemmer(self.language)
+        raw_tokens = []
+        total_texts = len(texts)
+        for i in xrange(total_t
