@@ -58,3 +58,8 @@ class CosineRelevanceMeasure(RelevanceMeasure):
     def __init__(self, vector_space=consts.VectorSpace.STEMS,
                  term_weighting=consts.TermWeighting.TF_IDF):
         super(CosineRelevanceMeasure, self).__init__()
+        self.vector_space = vector_space
+        self.term_weighting = term_weighting
+        
+
+    def set_text_collection(self,
