@@ -70,4 +70,9 @@ class CosineRelevanceMeasure(RelevanceMeasure):
         total_texts = len(texts)
         for i in xrange(total_texts):
             raw_tokens.append(utils.tokenize_and_filter(utils.prepare_text(texts[i])))
-            logging.progress("Preparing texts", i + 1, tota
+            logging.progress("Preparing texts", i + 1, total_texts)
+
+        logging.clear()
+
+        # Convert to stems or lemmata, depending on the vector space type
+        preprocessed_tokens = self._preproc
