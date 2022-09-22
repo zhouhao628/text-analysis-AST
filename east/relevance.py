@@ -75,4 +75,7 @@ class CosineRelevanceMeasure(RelevanceMeasure):
         logging.clear()
 
         # Convert to stems or lemmata, depending on the vector space type
-        preprocessed_tokens = self._preproc
+        preprocessed_tokens = self._preprocess_tokens(raw_tokens)
+
+        # Terms define the vector space (they can be words, stems or lemmata). They should be
+        # defined once here because 
