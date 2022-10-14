@@ -80,4 +80,9 @@ class CosineRelevanceMeasure(RelevanceMeasure):
         # Terms define the vector space (they can be words, stems or lemmata). They should be
         # defined once here because they will be reused when we compute td-idf for queries
         self.terms = list(set(utils.flatten(preprocessed_tokens)))
-        self.tf, self.idf = self._tf_idf(preprocessed_tok
+        self.tf, self.idf = self._tf_idf(preprocessed_tokens)
+
+
+    def _preprocess_tokens(self, tokens_in_texts):
+        if self.vector_space == consts.VectorSpace.WORDS:
+            return tokens_in_texts
