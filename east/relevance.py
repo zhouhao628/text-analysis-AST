@@ -90,4 +90,7 @@ class CosineRelevanceMeasure(RelevanceMeasure):
             # TODO(mikhaildubov): If the user does not specify the language, can we do some
             #                     auto language detection here?
             stemmed_tokens = []
-            total_texts = len(tokens_in_texts
+            total_texts = len(tokens_in_texts)
+            for i in xrange(total_texts):
+                stemmed_tokens.append([self.stemmer.stem(token) for token in tokens_in_texts[i]])
+                loggi
