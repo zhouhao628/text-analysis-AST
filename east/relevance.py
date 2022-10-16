@@ -86,3 +86,6 @@ class CosineRelevanceMeasure(RelevanceMeasure):
     def _preprocess_tokens(self, tokens_in_texts):
         if self.vector_space == consts.VectorSpace.WORDS:
             return tokens_in_texts
+        if self.vector_space == consts.VectorSpace.STEMS:
+            # TODO(mikhaildubov): If the user does not specify the language, can we do some
+            #  
