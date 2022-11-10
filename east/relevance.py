@@ -93,4 +93,7 @@ class CosineRelevanceMeasure(RelevanceMeasure):
             total_texts = len(tokens_in_texts)
             for i in xrange(total_texts):
                 stemmed_tokens.append([self.stemmer.stem(token) for token in tokens_in_texts[i]])
-                loggi
+                logging.progress("Stemming tokens in texts", i + 1, total_texts)
+            return stemmed_tokens
+        elif self.vector_space == consts.VectorSpace.LEMMATA:
+            # TODO(mikhai
