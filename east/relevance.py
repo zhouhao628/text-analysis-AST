@@ -96,4 +96,10 @@ class CosineRelevanceMeasure(RelevanceMeasure):
                 logging.progress("Stemming tokens in texts", i + 1, total_texts)
             return stemmed_tokens
         elif self.vector_space == consts.VectorSpace.LEMMATA:
-            # TODO(mikhai
+            # TODO(mikhaildubov): Implement this (what lemmatizer to use here?)
+            raise NotImplemented()
+
+        logging.clear()
+
+
+    def _tf_idf(self, tokens_in_te
