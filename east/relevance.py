@@ -102,4 +102,7 @@ class CosineRelevanceMeasure(RelevanceMeasure):
         logging.clear()
 
 
-    def _tf_idf(self, tokens_in_te
+    def _tf_idf(self, tokens_in_texts):
+        # Calculate the inverted term index to facilitate further calculations
+        # This is a mapping from a token to its position in the vector
+        ter
