@@ -110,4 +110,9 @@ class CosineRelevanceMeasure(RelevanceMeasure):
             term_index[self.terms[i]] = i
 
         total_texts = len(tokens_in_texts)
-        
+        terms_count = len(self.terms)
+
+        # Calculate TF and IDF
+        tf = [np.zeros(terms_count) for _ in xrange(total_texts)]
+        idf_per_ferm = defaultdict(int)
+ 
