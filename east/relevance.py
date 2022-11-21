@@ -115,4 +115,6 @@ class CosineRelevanceMeasure(RelevanceMeasure):
         # Calculate TF and IDF
         tf = [np.zeros(terms_count) for _ in xrange(total_texts)]
         idf_per_ferm = defaultdict(int)
- 
+        for i in xrange(total_texts):
+            logging.progress("Processing texts for TF-IDF", i + 1, total_texts)
+            #
