@@ -117,4 +117,6 @@ class CosineRelevanceMeasure(RelevanceMeasure):
         idf_per_ferm = defaultdict(int)
         for i in xrange(total_texts):
             logging.progress("Processing texts for TF-IDF", i + 1, total_texts)
-            #
+            # NOTE(mikhaildubov): For TF, we want to count each term as many time as it appears
+            for term in tokens_in_texts[i]:
+                if term i
