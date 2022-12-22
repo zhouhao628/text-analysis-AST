@@ -119,4 +119,7 @@ class CosineRelevanceMeasure(RelevanceMeasure):
             logging.progress("Processing texts for TF-IDF", i + 1, total_texts)
             # NOTE(mikhaildubov): For TF, we want to count each term as many time as it appears
             for term in tokens_in_texts[i]:
-                if term i
+                if term in term_index:
+                    tf[i][term_index[term]] += 1
+            # NOTE(mikhaildubov): For IDF, we want to count each document once for each term
+            if self
