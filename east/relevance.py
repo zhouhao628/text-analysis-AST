@@ -122,4 +122,7 @@ class CosineRelevanceMeasure(RelevanceMeasure):
                 if term in term_index:
                     tf[i][term_index[term]] += 1
             # NOTE(mikhaildubov): For IDF, we want to count each document once for each term
-            if self
+            if self.term_weighting == consts.TermWeighting.TF_IDF:
+                for term in set(tokens_in_texts[i]):
+                    if term in term_index:
+                 
