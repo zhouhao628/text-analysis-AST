@@ -125,4 +125,7 @@ class CosineRelevanceMeasure(RelevanceMeasure):
             if self.term_weighting == consts.TermWeighting.TF_IDF:
                 for term in set(tokens_in_texts[i]):
                     if term in term_index:
-                 
+                        idf_per_ferm[term] += 1
+            # TF Normalization
+            tf[i] = [freq * 1.0 / max(len(tokens_in_texts[i]), 1) for freq in tf[i]]
+        # Actual IDF me
