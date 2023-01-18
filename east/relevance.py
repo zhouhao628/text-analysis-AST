@@ -131,4 +131,9 @@ class CosineRelevanceMeasure(RelevanceMeasure):
         # Actual IDF metric calculation
         if self.term_weighting == consts.TermWeighting.TF_IDF:
             idf = np.zeros(len(self.terms))
-            for term in idf
+            for term in idf_per_ferm:
+                idf[term_index[term]] = 1 + math.log(total_texts * 1.0 / idf_per_ferm[term])
+        else:
+            idf = None
+
+        logging.c
