@@ -136,4 +136,11 @@ class CosineRelevanceMeasure(RelevanceMeasure):
         else:
             idf = None
 
-        logging.c
+        logging.clear()
+
+        return tf, idf
+
+
+    def _cosine_similarity(self, u, v):
+        u_norm = math.sqrt(np.dot(u, u)) if np.count_nonzero(u) else 1.0
+        
