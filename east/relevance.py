@@ -143,4 +143,8 @@ class CosineRelevanceMeasure(RelevanceMeasure):
 
     def _cosine_similarity(self, u, v):
         u_norm = math.sqrt(np.dot(u, u)) if np.count_nonzero(u) else 1.0
-        
+        v_norm = math.sqrt(np.dot(v, v)) if np.count_nonzero(v) else 1.0
+        return np.dot(u, v) / (u_norm * v_norm)
+
+
+    def relevance(s
