@@ -147,4 +147,6 @@ class CosineRelevanceMeasure(RelevanceMeasure):
         return np.dot(u, v) / (u_norm * v_norm)
 
 
-    def relevance(s
+    def relevance(self, keyphrase, text, synonimizer=None):
+        # Based on: https://janav.wordpress.com/2013/10/27/tf-idf-and-cosine-similarity/,
+        # but query vectors are defined he
