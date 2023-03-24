@@ -153,4 +153,8 @@ class CosineRelevanceMeasure(RelevanceMeasure):
         # (not in the reduced one as in the article).
 
         # TF-IDF for query tokens
-        query_tokens = self._pr
+        query_tokens = self._preprocess_tokens([utils.tokenize_and_filter(keyphrase)])
+        query_tf, query_idf = self._tf_idf(query_tokens)
+        query_tf = query_tf[0]
+
+        # Wei
