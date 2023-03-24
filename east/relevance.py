@@ -149,4 +149,8 @@ class CosineRelevanceMeasure(RelevanceMeasure):
 
     def relevance(self, keyphrase, text, synonimizer=None):
         # Based on: https://janav.wordpress.com/2013/10/27/tf-idf-and-cosine-similarity/,
-        # but query vectors are defined he
+        # but query vectors are defined here in the same vector space as document vectors
+        # (not in the reduced one as in the article).
+
+        # TF-IDF for query tokens
+        query_tokens = self._pr
