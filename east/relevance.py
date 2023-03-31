@@ -157,4 +157,6 @@ class CosineRelevanceMeasure(RelevanceMeasure):
         query_tf, query_idf = self._tf_idf(query_tokens)
         query_tf = query_tf[0]
 
-        # Wei
+        # Weighting for both text and query (either TF or TF-IDF)
+        if self.term_weighting == consts.TermWeighting.TF:
+            text_vector = self
