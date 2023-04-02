@@ -162,4 +162,7 @@ class CosineRelevanceMeasure(RelevanceMeasure):
             text_vector = self.tf[text]
             query_vector = query_tf
         elif self.term_weighting == consts.TermWeighting.TF_IDF:
-            text_vector = np.multiply(
+            text_vector = np.multiply(self.tf[text], self.idf)
+            query_vector = np.multiply(query_tf, query_idf)
+
+        return self._cosine_similarity(text_vector, query_vector)
