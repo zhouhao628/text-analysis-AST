@@ -159,4 +159,7 @@ class CosineRelevanceMeasure(RelevanceMeasure):
 
         # Weighting for both text and query (either TF or TF-IDF)
         if self.term_weighting == consts.TermWeighting.TF:
-            text_vector = self
+            text_vector = self.tf[text]
+            query_vector = query_tf
+        elif self.term_weighting == consts.TermWeighting.TF_IDF:
+            text_vector = np.multiply(
