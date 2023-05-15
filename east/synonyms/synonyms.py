@@ -18,4 +18,6 @@ from east.synonyms import utils
 class SynonymExtractor(object):
 
     def __init__(self, input_path):
-       
+        self.current_os = utils.determine_operating_system()
+        self.tomita_path, self.tomita_binary = self._get_tomita_path()
+        if 
