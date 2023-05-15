@@ -23,4 +23,6 @@ class SynonymExtractor(object):
         if self.tomita_binary is None:
             raise exceptions.TomitaNotInstalledException()
         self.text, self.number_of_texts = self._retrieve_text(input_path)
-       
+        self.dependency_triples, self.dt_for_r, self.dt_for_w1r, self.dt_for_rw2 = \
+            self._retrieve_dependency_triples(self.text)
+        self.word_frequencies = self._cal
