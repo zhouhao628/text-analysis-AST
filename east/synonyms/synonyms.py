@@ -27,4 +27,6 @@ class SynonymExtractor(object):
             self._retrieve_dependency_triples(self.text)
         self.word_frequencies = self._calculate_word_frequencies(self.text)
         self.frequencies = self._calculate_dt_frequencies(self.dependency_triples)
-        self.wor
+        self.words = set([dt[0] for dt in self.dependency_triples] +
+                         [dt[2] for dt in self.dependency_triples])
+        self.relations = s
