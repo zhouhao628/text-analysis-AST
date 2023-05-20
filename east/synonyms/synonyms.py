@@ -29,4 +29,9 @@ class SynonymExtractor(object):
         self.frequencies = self._calculate_dt_frequencies(self.dependency_triples)
         self.words = set([dt[0] for dt in self.dependency_triples] +
                          [dt[2] for dt in self.dependency_triples])
-        self.relations = s
+        self.relations = set([dt[1] for dt in self.dependency_triples])
+        self.I_memoized = {}
+        self.T_memoized = {}
+        self.synonyms_memoized = {}
+
+    def _retriev
