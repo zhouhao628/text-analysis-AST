@@ -38,4 +38,6 @@ class SynonymExtractor(object):
         if os.path.isdir(input_path):
             text = ""
             number_of_texts = 0
-            for file_name in os.
+            for file_name in os.listdir(input_path):
+                if file_name.endswith(".txt"):
+                    with open(os.path.abspath(input_path) + "/" + f
