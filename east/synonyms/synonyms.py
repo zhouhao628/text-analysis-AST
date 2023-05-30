@@ -34,4 +34,8 @@ class SynonymExtractor(object):
         self.T_memoized = {}
         self.synonyms_memoized = {}
 
-    def _retriev
+    def _retrieve_text(self, input_path):
+        if os.path.isdir(input_path):
+            text = ""
+            number_of_texts = 0
+            for file_name in os.
