@@ -40,4 +40,8 @@ class SynonymExtractor(object):
             number_of_texts = 0
             for file_name in os.listdir(input_path):
                 if file_name.endswith(".txt"):
-                    with open(os.path.abspath(input_path) + "/" + f
+                    with open(os.path.abspath(input_path) + "/" + file_name) as f:
+                        text += f.read()
+                        number_of_texts += 1
+        else:
+            with o
