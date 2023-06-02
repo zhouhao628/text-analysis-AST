@@ -44,4 +44,9 @@ class SynonymExtractor(object):
                         text += f.read()
                         number_of_texts += 1
         else:
-            with o
+            with open(input_path) as f:
+                text = f.read()
+                number_of_texts = 1
+        return text, number_of_texts
+
+    def _retrieve_d
