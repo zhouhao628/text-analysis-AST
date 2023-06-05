@@ -58,4 +58,6 @@ class SynonymExtractor(object):
         dt_for_w1r = collections.defaultdict(list)
         dt_for_rw2 = collections.defaultdict(list)
 
-        p = subprocess.Popen([self.tomita_binary, "c
+        p = subprocess.Popen([self.tomita_binary, "config.proto"],
+                             stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                             stderr=subprocess.PIPE, cwd=self.tomita_pa
