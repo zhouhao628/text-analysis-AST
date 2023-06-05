@@ -55,4 +55,7 @@ class SynonymExtractor(object):
 
         # Additional indexes to speed up the calculation of I(w1, r, w2)
         dt_for_r = collections.defaultdict(list)
-        dt_
+        dt_for_w1r = collections.defaultdict(list)
+        dt_for_rw2 = collections.defaultdict(list)
+
+        p = subprocess.Popen([self.tomita_binary, "c
