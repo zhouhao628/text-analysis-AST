@@ -49,4 +49,10 @@ class SynonymExtractor(object):
                 number_of_texts = 1
         return text, number_of_texts
 
-    def _retrieve_d
+    def _retrieve_dependency_triples(self, text):
+
+        dependency_triples = []
+
+        # Additional indexes to speed up the calculation of I(w1, r, w2)
+        dt_for_r = collections.defaultdict(list)
+        dt_
