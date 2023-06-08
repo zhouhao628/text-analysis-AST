@@ -69,4 +69,8 @@ class SynonymExtractor(object):
         
         for rel in relations:
             r = rel.childNodes[0].nodeName
-         
+            w1, w2 = rel.childNodes[0].attributes['val'].value.split(' ', 1)
+
+            dt = (w1, r, w2)
+            dependency_triples.append(dt)
+            dt_for_r[r].app
