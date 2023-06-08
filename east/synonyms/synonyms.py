@@ -60,4 +60,8 @@ class SynonymExtractor(object):
 
         p = subprocess.Popen([self.tomita_binary, "config.proto"],
                              stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                             stderr=subprocess.PIPE, cwd=self.tomita_pa
+                             stderr=subprocess.PIPE, cwd=self.tomita_path,
+                             shell=(self.current_os == consts.OperatingSystem.WINDOWS))
+        out, err = p.communicate(input=text)
+
+        xmldoc = minidom.parseSt
