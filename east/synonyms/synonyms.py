@@ -64,4 +64,9 @@ class SynonymExtractor(object):
                              shell=(self.current_os == consts.OperatingSystem.WINDOWS))
         out, err = p.communicate(input=text)
 
-        xmldoc = minidom.parseSt
+        xmldoc = minidom.parseString(out)
+        relations = xmldoc.getElementsByTagName('Relation') 
+        
+        for rel in relations:
+            r = rel.childNodes[0].nodeName
+         
