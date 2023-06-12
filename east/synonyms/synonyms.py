@@ -93,4 +93,6 @@ class SynonymExtractor(object):
 
         if self.current_os == consts.OperatingSystem.LINUX_64:
             tomita_binary = "./tomita-linux64"
-        elif self.current_os =
+        elif self.current_os == consts.OperatingSystem.LINUX_32:
+            tomita_binary = "./tomita-linux32"
+        elif self.current_os == consts.OperatingSystem.WINDOW
