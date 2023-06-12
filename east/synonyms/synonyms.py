@@ -81,4 +81,8 @@ class SynonymExtractor(object):
             r_inv = r[:-3] if r.endswith("_of") else (r + "_of")
             dt_inv = (w2, r_inv, w1)
             dependency_triples.append(dt_inv)
-          
+            dt_for_r[r_inv].append(dt_inv)
+            dt_for_w1r[(w2, r_inv)].append(dt_inv)
+            dt_for_rw2[(r_inv, w1)].append(dt_inv)
+
+        return de
