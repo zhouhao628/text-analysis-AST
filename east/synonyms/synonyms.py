@@ -73,4 +73,9 @@ class SynonymExtractor(object):
 
             dt = (w1, r, w2)
             dependency_triples.append(dt)
-            dt_for_r[r].app
+            dt_for_r[r].append(dt)
+            dt_for_w1r[(w1, r)].append(dt)
+            dt_for_rw2[(r, w2)].append(dt)
+
+            # NOTE(msdubov): Also add inversed triples.
+  
