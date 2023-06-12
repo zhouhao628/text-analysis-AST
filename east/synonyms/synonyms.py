@@ -89,4 +89,8 @@ class SynonymExtractor(object):
 
     def _get_tomita_path(self):
         tomita_path = (os.path.dirname(os.path.abspath(__file__)) +
-         
+                       "/../../tools/tomita/")
+
+        if self.current_os == consts.OperatingSystem.LINUX_64:
+            tomita_binary = "./tomita-linux64"
+        elif self.current_os =
