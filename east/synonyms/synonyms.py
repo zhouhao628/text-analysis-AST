@@ -85,4 +85,8 @@ class SynonymExtractor(object):
             dt_for_w1r[(w2, r_inv)].append(dt_inv)
             dt_for_rw2[(r_inv, w1)].append(dt_inv)
 
-        return de
+        return dependency_triples, dt_for_r, dt_for_w1r, dt_for_rw2
+
+    def _get_tomita_path(self):
+        tomita_path = (os.path.dirname(os.path.abspath(__file__)) +
+         
