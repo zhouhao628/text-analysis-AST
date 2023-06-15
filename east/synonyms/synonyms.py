@@ -105,4 +105,7 @@ class SynonymExtractor(object):
 
         return tomita_path, tomita_binary
 
-  
+    def _calculate_word_frequencies(self, text):
+        text = common_utils.prepare_text(text)
+        words = common_utils.tokenize(text)
+        res = collections.defau
