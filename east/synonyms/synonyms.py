@@ -98,4 +98,11 @@ class SynonymExtractor(object):
         elif self.current_os == consts.OperatingSystem.WINDOWS:
             tomita_binary = "tomitaparser.exe"
         elif self.current_os == consts.OperatingSystem.MACOS:
-            tomita_binary = "./tomita-
+            tomita_binary = "./tomita-mac"
+
+        if not os.access(tomita_path + tomita_binary, os.F_OK):
+            tomita_binary = None
+
+        return tomita_path, tomita_binary
+
+  
