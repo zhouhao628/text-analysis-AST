@@ -108,4 +108,10 @@ class SynonymExtractor(object):
     def _calculate_word_frequencies(self, text):
         text = common_utils.prepare_text(text)
         words = common_utils.tokenize(text)
-        res = collections.defau
+        res = collections.defaultdict(int)
+        for word in words:
+            res[word] += 1
+        return res
+
+    def _calculate_dt_frequencies(self, dependency_triples):
+    
