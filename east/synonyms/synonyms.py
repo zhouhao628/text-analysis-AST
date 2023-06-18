@@ -114,4 +114,10 @@ class SynonymExtractor(object):
         return res
 
     def _calculate_dt_frequencies(self, dependency_triples):
-    
+        res = collections.defaultdict(int)
+        for dt in dependency_triples:
+            res[dt] += 1
+        return res
+
+    def I(self, w1, r, w2):
+        if 
