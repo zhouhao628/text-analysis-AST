@@ -120,4 +120,9 @@ class SynonymExtractor(object):
         return res
 
     def I(self, w1, r, w2):
-        if 
+        if (w1, r, w2) in self.I_memoized:
+            return self.I_memoized[(w1, r, w2)]
+
+        fr_w1rw2 = self.frequencies[w1, r, w2]
+        if not fr_w1rw2:
+            return
