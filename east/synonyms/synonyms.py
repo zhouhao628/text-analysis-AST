@@ -127,4 +127,6 @@ class SynonymExtractor(object):
         if not fr_w1rw2:
             return 0.0
         fr__r_ = sum(self.frequencies[triple] for triple in self.dt_for_r[r])
-        fr_w1r_ = sum(self.frequencies[triple] for triple in se
+        fr_w1r_ = sum(self.frequencies[triple] for triple in self.dt_for_w1r[(w1, r)])
+        fr__rw2 = sum(self.frequencies[triple] for triple in self.dt_for_rw2[(r, w2)])
+        res = max(math.log(float(fr_w1rw2) * fr__r_ / fr_
