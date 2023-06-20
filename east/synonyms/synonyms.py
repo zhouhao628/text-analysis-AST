@@ -125,4 +125,6 @@ class SynonymExtractor(object):
 
         fr_w1rw2 = self.frequencies[w1, r, w2]
         if not fr_w1rw2:
-            return
+            return 0.0
+        fr__r_ = sum(self.frequencies[triple] for triple in self.dt_for_r[r])
+        fr_w1r_ = sum(self.frequencies[triple] for triple in se
