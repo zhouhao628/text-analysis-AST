@@ -129,4 +129,9 @@ class SynonymExtractor(object):
         fr__r_ = sum(self.frequencies[triple] for triple in self.dt_for_r[r])
         fr_w1r_ = sum(self.frequencies[triple] for triple in self.dt_for_w1r[(w1, r)])
         fr__rw2 = sum(self.frequencies[triple] for triple in self.dt_for_rw2[(r, w2)])
-        res = max(math.log(float(fr_w1rw2) * fr__r_ / fr_
+        res = max(math.log(float(fr_w1rw2) * fr__r_ / fr_w1r_ / fr__rw2), 0.0)
+        self.I_memoized[(w1, r, w2)] = res
+        return res
+
+    def T(self, w):
+        if w in self.T_memoized:
