@@ -152,4 +152,6 @@ class SynonymExtractor(object):
             return 0.0
 
     def get_synonyms(self, threshold=0.3, return_similarity_measure=False):
-        synonyms = collections.defau
+        synonyms = collections.defaultdict(list)
+        words = filter(lambda w: len(w) > 2 and
+                                 self.word_frequencies[w] > self.number_of_texts / 50
