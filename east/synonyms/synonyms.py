@@ -148,4 +148,8 @@ class SynonymExtractor(object):
                        sum(self.I(w2, r, w) for (r, w) in self.T(w2)))
         if denominator:
             return numerator / denominator
-     
+        else:
+            return 0.0
+
+    def get_synonyms(self, threshold=0.3, return_similarity_measure=False):
+        synonyms = collections.defau
