@@ -144,4 +144,8 @@ class SynonymExtractor(object):
     def similarity(self, w1, w2):
         numerator = sum(self.I(w1, r, w) + self.I(w2, r, w)
                         for (r, w) in self.T(w1) & self.T(w2))
-        denominator = (sum(self.I(w1, r, w) for (r, w) in self
+        denominator = (sum(self.I(w1, r, w) for (r, w) in self.T(w1)) +
+                       sum(self.I(w2, r, w) for (r, w) in self.T(w2)))
+        if denominator:
+            return numerator / denominator
+     
