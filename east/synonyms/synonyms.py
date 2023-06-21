@@ -158,4 +158,8 @@ class SynonymExtractor(object):
                        self.words)
         combs = itertools.combinations(words, 2)
         for w1, w2 in combs:
-            sim = self.similarity(w1, w
+            sim = self.similarity(w1, w2)
+            if sim > threshold:
+                if return_similarity_measure:
+                    synonyms[w1].append((w2, sim))
+                    sy
