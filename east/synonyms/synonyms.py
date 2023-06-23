@@ -162,4 +162,8 @@ class SynonymExtractor(object):
             if sim > threshold:
                 if return_similarity_measure:
                     synonyms[w1].append((w2, sim))
-                    sy
+                    synonyms[w2].append((w1, sim))
+                else:
+                    synonyms[w1].append(w2)
+                    synonyms[w2].append(w1)
+        return synonyms
