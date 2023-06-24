@@ -40,4 +40,7 @@ def tokenize(text):
 
 def tokenize_and_filter(text, min_word_length=3, stopwords=None):
     tokens = tokenize(text)
-    # TODO(mikhaildubov): Add language 
+    # TODO(mikhaildubov): Add language detection
+    stopwords = stopwords or set(word.upper() for word in nltk_stopwords.words("english"))
+    return [token for token in tokens
+            if len(token
