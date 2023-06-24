@@ -43,4 +43,10 @@ def tokenize_and_filter(text, min_word_length=3, stopwords=None):
     # TODO(mikhaildubov): Add language detection
     stopwords = stopwords or set(word.upper() for word in nltk_stopwords.words("english"))
     return [token for token in tokens
-            if len(token
+            if len(token) >= min_word_length and token not in stopwords]
+
+
+def text_to_strings_collection(text, words=3):
+    """
+    Splits the text to a collection of strings;
+    a GAST
