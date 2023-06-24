@@ -17,4 +17,10 @@ class ImmutableMixin(object):
 
     def __setattr__(self, key, value):
         if self._inited:
-            raise exception
+            raise exceptions.ImmutableException()
+        super(ImmutableMixin, self).__setattr__(key, value)
+
+
+class EnumMixin(object):
+    def __iter__(self):
+        for 
