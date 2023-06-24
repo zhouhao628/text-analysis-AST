@@ -29,4 +29,10 @@ class EnumMixin(object):
 
 
 def prepare_text(text):
-    tex
+    text = unicode(text.decode('utf-8', errors='replace'))
+    text = text.upper()
+    return text
+
+
+def tokenize(text):
+    return re.findall(re.compile("[\w']+", r
