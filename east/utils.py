@@ -10,4 +10,11 @@ from nltk.corpus import stopwords as nltk_stopwords
 
 
 class ImmutableMixin(object):
-    _in
+    _inited = False
+
+    def __init__(self):
+        self._inited = True
+
+    def __setattr__(self, key, value):
+        if self._inited:
+            raise exception
