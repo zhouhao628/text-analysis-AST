@@ -23,4 +23,10 @@ class ImmutableMixin(object):
 
 class EnumMixin(object):
     def __iter__(self):
-        for 
+        for k, v in itertools.imap(lambda x: (x, getattr(self, x)), dir(self)):
+            if not k.startswith('_'):
+                yield v
+
+
+def prepare_text(text):
+    tex
