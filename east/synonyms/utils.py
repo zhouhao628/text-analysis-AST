@@ -12,4 +12,8 @@ def determine_operating_system():
         return consts.OperatingSystem.WINDOWS
     elif system == "Linux":
         if bits.startswith("64"):
-            return consts.Ope
+            return consts.OperatingSystem.LINUX_64
+        else:
+            return consts.OperatingSystem.LINUX_32
+    else:
+        return consts.OperatingSystem.MACOS
