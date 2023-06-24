@@ -35,4 +35,9 @@ def prepare_text(text):
 
 
 def tokenize(text):
-    return re.findall(re.compile("[\w']+", r
+    return re.findall(re.compile("[\w']+", re.U), text)
+
+
+def tokenize_and_filter(text, min_word_length=3, stopwords=None):
+    tokens = tokenize(text)
+    # TODO(mikhaildubov): Add language 
