@@ -49,4 +49,7 @@ def tokenize_and_filter(text, min_word_length=3, stopwords=None):
 def text_to_strings_collection(text, words=3):
     """
     Splits the text to a collection of strings;
-    a GAST
+    a GAST for such a split collection usually produces
+    better results in keyword matching that a GAST
+    for the whole text. The word parameters determines
+    how man
