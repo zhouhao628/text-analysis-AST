@@ -59,3 +59,8 @@ def text_to_strings_collection(text, words=3):
     """
     
     text = prepare_text(text)
+    strings_collection = tokenize(text)
+    strings_collection = filter(lambda s: len(s) > 2 and not s.isdigit(), strings_collection)
+        
+    i = 0
+    strings_colle
