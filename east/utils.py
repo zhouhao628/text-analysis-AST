@@ -72,4 +72,8 @@ def text_to_strings_collection(text, words=3):
         strings_collection_grouped.append(group)
         i += words
 
-    # Having an empty strings collection would lead to a runtime err
+    # Having an empty strings collection would lead to a runtime errors in the applications.
+    if not strings_collection_grouped:
+        strings_collection_grouped = [" "]
+        
+    return strings_collection_groupe
