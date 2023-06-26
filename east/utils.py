@@ -68,4 +68,8 @@ def text_to_strings_collection(text, words=3):
         group = ''
         for j in xrange(words):
             if i + j < len(strings_collection):
-              
+                group += strings_collection[i+j]
+        strings_collection_grouped.append(group)
+        i += words
+
+    # Having an empty strings collection would lead to a runtime err
