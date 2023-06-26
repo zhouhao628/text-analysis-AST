@@ -76,4 +76,11 @@ def text_to_strings_collection(text, words=3):
     if not strings_collection_grouped:
         strings_collection_grouped = [" "]
         
-    return strings_collection_groupe
+    return strings_collection_grouped
+
+
+def text_collection_to_string_collection(text_collection, words=3):
+    return flatten([text_to_strings_collection(text) for text in text_collection])
+
+
+def 
