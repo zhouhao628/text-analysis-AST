@@ -63,4 +63,9 @@ def text_to_strings_collection(text, words=3):
     strings_collection = filter(lambda s: len(s) > 2 and not s.isdigit(), strings_collection)
         
     i = 0
-    strings_colle
+    strings_collection_grouped = []
+    while i < len(strings_collection):
+        group = ''
+        for j in xrange(words):
+            if i + j < len(strings_collection):
+              
