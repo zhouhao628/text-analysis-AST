@@ -89,4 +89,8 @@ def random_string(length):
 
 
 def flatten(lst):
-    # NOTE(mikhail
+    # NOTE(mikhaildubov): This is the fastest implementation according to bit.ly/so_flat_list
+    return list(itertools.chain.from_iterable(lst))
+
+
+def output_is_redire
