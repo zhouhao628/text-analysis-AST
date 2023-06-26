@@ -52,4 +52,10 @@ def text_to_strings_collection(text, words=3):
     a GAST for such a split collection usually produces
     better results in keyword matching that a GAST
     for the whole text. The word parameters determines
-    how man
+    how many words each string in the collection shall
+    consist of (3 by default)
+    
+    return: Unicode
+    """
+    
+    text = prepare_text(text)
