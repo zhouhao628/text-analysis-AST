@@ -83,4 +83,10 @@ def text_collection_to_string_collection(text_collection, words=3):
     return flatten([text_to_strings_collection(text) for text in text_collection])
 
 
-def 
+def random_string(length):
+    string = "".join([unichr(ord("A") + random.randint(0, 25)) for _ in xrange(length - 2)])
+    return string
+
+
+def flatten(lst):
+    # NOTE(mikhail
