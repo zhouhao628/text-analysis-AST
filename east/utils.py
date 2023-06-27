@@ -100,4 +100,6 @@ def output_is_redirected():
 def itersubclasses(cls, _seen=None):
     """Generator over all subclasses of a given class in depth first order."""
 
-  
+    if not isinstance(cls, type):
+        raise TypeError(_('itersubclasses must be called with '
+                          'new-style classes, not %.100r') %
