@@ -118,3 +118,9 @@ def itersubclasses(cls, _seen=None):
 
 def import_modules_from_package(package):
     """Import modules from package and append into sys.modules
+
+    :param package: full package name, e.g. east.asts
+    """
+    path = [os.path.dirname(__file__), '..'] + package.split('.')
+    path = os.path.join(*path)
+ 
