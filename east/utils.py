@@ -107,4 +107,9 @@ def itersubclasses(cls, _seen=None):
     try:
         subs = cls.__subclasses__()
     except TypeError:   # fails only when cls is type
-     
+        subs = cls.__subclasses__(cls)
+    for sub in subs:
+        if sub not in _seen:
+            _seen.add(sub)
+            yield sub
+            for sub in itersubclasses(
