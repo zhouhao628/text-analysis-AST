@@ -112,4 +112,9 @@ def itersubclasses(cls, _seen=None):
         if sub not in _seen:
             _seen.add(sub)
             yield sub
-            for sub in itersubclasses(
+            for sub in itersubclasses(sub, _seen):
+                yield sub
+
+
+def import_modules_from_package(package):
+    """Import modules from package and append into sys.modules
