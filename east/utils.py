@@ -128,4 +128,6 @@ def import_modules_from_package(package):
             if filename.startswith('__') or not filename.endswith('.py'):
                 continue
             new_package = ".".join(root.split(os.sep)).split("....")[1]
-            module_name = '%s.%s' % (new_package
+            module_name = '%s.%s' % (new_package, filename[:-3])
+            if module_name not in sys.modules:
+                __import__(module_name)
