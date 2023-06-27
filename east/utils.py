@@ -123,4 +123,6 @@ def import_modules_from_package(package):
     """
     path = [os.path.dirname(__file__), '..'] + package.split('.')
     path = os.path.join(*path)
- 
+    for root, dirs, files in os.walk(path):
+        for filename in files:
+            if filename.startswith('__') or not filename.endswith
