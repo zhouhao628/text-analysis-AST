@@ -125,4 +125,7 @@ def import_modules_from_package(package):
     path = os.path.join(*path)
     for root, dirs, files in os.walk(path):
         for filename in files:
-            if filename.startswith('__') or not filename.endswith
+            if filename.startswith('__') or not filename.endswith('.py'):
+                continue
+            new_package = ".".join(root.split(os.sep)).split("....")[1]
+            module_name = '%s.%s' % (new_package
