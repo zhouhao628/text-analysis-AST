@@ -102,4 +102,9 @@ def itersubclasses(cls, _seen=None):
 
     if not isinstance(cls, type):
         raise TypeError(_('itersubclasses must be called with '
-                          'new-style classes, not %.100r') %
+                          'new-style classes, not %.100r') % cls)
+    _seen = _seen or set()
+    try:
+        subs = cls.__subclasses__()
+    except TypeError:   # fails only when cls is type
+     
