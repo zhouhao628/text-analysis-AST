@@ -93,4 +93,11 @@ def flatten(lst):
     return list(itertools.chain.from_iterable(lst))
 
 
-def output_is_redire
+def output_is_redirected():
+    return os.fstat(0) != os.fstat(1)
+
+
+def itersubclasses(cls, _seen=None):
+    """Generator over all subclasses of a given class in depth first order."""
+
+  
