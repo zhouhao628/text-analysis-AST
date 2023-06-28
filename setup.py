@@ -12,4 +12,11 @@ setuptools.setup(
         "testtools>=0.9.35"
     ],
 
-    entry_point
+    entry_points = {
+        "console_scripts": [
+            "east = east.main:main"
+        ]
+    },
+
+    author = "Mikhail Dubov",
+    author_email =
