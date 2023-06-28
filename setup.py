@@ -22,4 +22,6 @@ setuptools.setup(
     author_email = "msdubov@gmail.com",
     license = "MIT",
     url = "https://github.com/msdubov/AST-text-analysis",
-    download_url = "https://github.com/msdubov/AST-text-analysis/tarball/0.3.8
+    download_url = "https://github.com/msdubov/AST-text-analysis/tarball/0.3.8",
+    keywords = ["text analysis", "suffix tree", "synonym extraction"]
+)
