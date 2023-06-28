@@ -19,4 +19,7 @@ setuptools.setup(
     },
 
     author = "Mikhail Dubov",
-    author_email =
+    author_email = "msdubov@gmail.com",
+    license = "MIT",
+    url = "https://github.com/msdubov/AST-text-analysis",
+    download_url = "https://github.com/msdubov/AST-text-analysis/tarball/0.3.8
