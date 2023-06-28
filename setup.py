@@ -4,4 +4,12 @@ setuptools.setup(
     name = "EAST",
     packages = setuptools.find_packages(),
     version = "0.3.8",
-    description = "Text analysis l
+    description = "Text analysis library based on the Annotated Suffix Tree method",
+
+    install_requires = [
+        "numpy>=1.7.1",
+        "docutils>=0.3",
+        "testtools>=0.9.35"
+    ],
+
+    entry_point
